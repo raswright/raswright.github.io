@@ -17,3 +17,17 @@ h1 {
 	width: 200px;
 	padding: 10px;
 }
+.assign {
+	width: 20%;
+	box-shadow: 8px 8px [powderblue];
+	display: block;
+	border-radius: 20px;
+}
+body{
+	display: flex;
+	flex-wrap: wrap;
+}
+h1 {
+	width: 100%;
+	display: block;
+}
