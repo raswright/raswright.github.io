@@ -1,0 +1,65 @@
+/* Change the default font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; 
+    color: #eaeaea; 
+}
+
+/* Styles the container */
+#container {
+    background-color: #0a0a23; 
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 8px;
+    border: 2px solid #2c3e50; 
+}
+
+/* Title style */
+#title {
+    color: #1f3a93; 
+    text-align: center;
+}
+
+/* Creator text */
+#creator {
+    text-align: center;
+    font-style: italic;
+    color: #afcbff; 
+}
+
+/* Welcome text */
+#welcome-text {
+    line-height: 1.6;
+    color: #eaeaea; 
+}
+
+/* Assignments header */
+#assignments-header {
+    color: #1f3a93; 
+    margin-top: 40px;
+}
+
+/* Assignments list */
+#assignments-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Assignment links */
+.assignment-link {
+    text-decoration: none;
+    color: #4f6a9e; 
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    background-color: #1a1a1a; 
+    border: 1px solid #2c3e50; 
+}
+
+/* Assignment links hover */
+.assignment-link:hover {
+    background-color: #ffffff; 
+    color: #afcbff; 
+}

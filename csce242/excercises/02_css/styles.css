@@ -1,0 +1,50 @@
+/*  Structure */
+body {
+    background-color: rgb(143, 108, 114);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div{
+    background: rgb(134, 129, 187);
+    padding: 5px;
+    margin:20px auto;
+    width: 70%;
+    border-radius:10px;
+}
+
+
+/*Navigation */
+#main-nav ul{
+    padding-left: 0;
+    width: fit-content;
+    margin: auto;
+}
+
+#main-nav li{
+    list-style-type: none;
+    display: inline-block;
+}
+/*Navigation */
+#main-nav a {
+    list-style-type: none; /*no bullet */
+    text-decoration: none; /*no underline*/
+    background: rgb(78, 138, 48)
+    color rgb(186, 133, 140)
+    padding 5px;
+    margin: 5px
+    border-radius 2px;
+}
+
+#main-nav a:hover {
+    background: black
+    color rgb(78, 138, 48)
+}
+
+/*Typography */
+h1 {
+    color: red;
+}
+
+p {
+    color:rgb(255, 255, 255);
+}
