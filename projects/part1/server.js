@@ -7,7 +7,7 @@ const app = express();
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/fitlife', { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Define a Schema and Model for storing class bookings
+// Define a Schema/Model for keeping class bookings
 const bookingSchema = new mongoose.Schema({
     className: String,
     date: String,
@@ -42,7 +42,7 @@ app.post('/book-class', (req, res) => {
     });
 });
 
-// Start the server
+// Starts server
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
