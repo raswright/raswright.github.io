@@ -1,65 +1,83 @@
-/* Change the default font */
+/* General body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a; 
-    color: #eaeaea; 
-}
-
-/* Styles the container */
-#container {
-    background-color: #0a0a23; 
-    padding: 20px;
-    margin: 50px auto;
-    width: 80%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
-    border-radius: 8px;
-    border: 2px solid #2c3e50; 
-}
-
-/* Title style */
-#title {
-    color: #1f3a93; 
-    text-align: center;
-}
-
-/* Creator text */
-#creator {
-    text-align: center;
-    font-style: italic;
-    color: #afcbff; 
-}
-
-/* Welcome text */
-#welcome-text {
-    line-height: 1.6;
-    color: #eaeaea; 
-}
-
-/* Assignments header */
-#assignments-header {
-    color: #1f3a93; 
-    margin-top: 40px;
-}
-
-/* Assignments list */
-#assignments-list {
-    list-style-type: none;
+    margin: 0;
     padding: 0;
-}
-
-/* Assignment links */
-.assignment-link {
-    text-decoration: none;
-    color: #4f6a9e; 
-    padding: 10px;
-    display: block;
-    border-radius: 5px;
     background-color: #1a1a1a; 
-    border: 1px solid #2c3e50; 
+    color: #eaeaea; 
 }
 
-/* Assignment links hover */
-.assignment-link:hover {
-    background-color: #ffffff; 
+/* Header styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a0a23; 
+    color: #afcbff;
+}
+
+header h1 {
+    margin: 0;
+    color: #1f3a93; 
+}
+
+/* Main content (assignments) styling */
+#assignments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.assignment {
+    background-color: #0a0a23; 
+    padding: 15px;
+    margin: 10px;
+    border: 2px solid #2c3e50; 
+    border-radius: 8px;
+    width: 30%; /* Adjust as needed to fit three in a row */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    flex: 1 1 30%; /* Flexbox property to ensure equal spacing */
+}
+
+.assignment h2 {
+    color: #1f3a93; 
+}
+
+.assignment p {
+    color: #eaeaea; 
+    line-height: 1.6;
+}
+
+/* Assignment images styling */
+.assignment-image {
+    width: 300px; /* Set the width to 300px */
+    height: 150px; /* Set the height to 150px */
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0a0a23; 
     color: #afcbff; 
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #assignments {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .assignment {
+        width: 90%; /* Full width for mobile view */
+        margin-bottom: 20px; /* Add margin between stacked items */
+    }
+
+    .assignment-image {
+        width: 100%; /* Set width to 100% to be responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
 }

@@ -1,0 +1,92 @@
+/*  Structure */
+body {
+    background: url("images/ocean.jpg");
+    font-family: Arial, Helvetica, sans-seif;
+    
+}
+
+#content {
+    width:95%;
+    margin:auto;
+    background: #3f434b
+    border-radius 5px;
+}
+
+#species-section {
+    background:lightgreen
+    padding- 5px;
+    margin: 5px;
+}
+
+#main-header{
+    background-color:rgb(113, 173, 184)
+    border-radius 5px;
+
+}
+
+#main-footer{
+    background-color: rgb(241, 163, 68);
+
+}
+
+/*Navigation */
+#main-nav ul{
+    padding-left: 0;
+}
+
+#main-nav li{
+    list-style-type: none;
+    border-bottom: 2px solide rgb(177, 69, 65);
+}
+
+#main-nav a {
+    text-decoration: none;
+    padding: 5px;
+    background: black;
+    color: rgb(127, 186, 144);
+    display: block;
+}
+
+/* Typography */
+#main-nav a {
+    list-style-type: none; /*no bullet */
+    text-decoration: none; /*no underline*/
+    background: rgb(78, 138, 48)
+    color rgb(186, 133, 140)
+    padding 5px;
+    margin: 5px
+    border-radius 2px;
+}
+
+/* Typography */
+#main-footer p {
+    text-alight: center;
+}
+
+
+/* Media Queries */
+
+/*Apply to 600px and larger */
+@media only screen and (min-width: 600px) {
+    .columns {
+        display: flex;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    #main-nav li {
+        flex: 1;
+    }
+
+}
+
+/*Apply to 768px and larger */
+@media only screen and (min-width: 768px) {
+
+}

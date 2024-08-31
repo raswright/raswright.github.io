@@ -2,18 +2,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>CSCE 242 Web Applications</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <h1 id="title">CSCE 242 Web Applications</h1>
-        <p id="creator"><strong> RaSean Wright</strong></p>
-        <p id="welcome-text">Welcome to the CSCE 242 course portal. This page serves as a central hub for all assignments related to the CSCE 242 Web Applications course. Each link below will take you to the respective assignment page for further details.</p>
-        <h2 id="assignments-header">Assignments</h2>
-        <ul id="assignments-list">
-            <li><a href="/csce242/assignments/01_html/01.html" class="assignment-link">Assignment 1</a></li>
-            <li><a href="/csce242/assignments/02_css/index.html" class="assignment-link">Assignment 2</a></li>
-        </ul>
-    </div>
+    <header>
+        <h1>CSCE 242: Client-Server Computing</h1>
+        <p id="creator"><strong>RaSean Wright</strong></p>
+    </header>
+
+    <main id="assignments">
+        <section class="assignment">
+            <h2><a href="/csce242/assignments/01_html/01.html">Assignment 1 – Basic HTML</a></h2>
+            <img src="/csce242/assignments/images/Screenshot1.png" alt="Assignment 1 Screenshot" class="assignment-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+        </section>
+
+        <section class="assignment">
+            <h2><a href="/csce242/assignments/02_css/index.html">Assignment 2 – Basic CSS</a></h2>
+            <img src="/csce242/assignments/images/Screenshot2.png" alt="Assignment 2 Screenshot" class="assignment-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+        </section>
+
+        <section class="assignment">
+            <h2><a href="/csce242/assignments/03_flexbox/index.html">Assignment 3 – Page Layout</a></h2>
+            <img src="/csce242/assignments/images/Screenshot3.png" alt="Assignment 3 Screenshot" class="assignment-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RaSean Wright. All rights reserved.</p>
+    </footer>
 </body>
 </html>
