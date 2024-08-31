@@ -1,6 +1,6 @@
 /* General body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1a1a1a; 
@@ -20,7 +20,7 @@ header h1 {
     color: #1f3a93; 
 }
 
-/* Main content (assignments) styling */
+/* Main content styling */
 #assignments {
     display: flex;
     justify-content: space-between;
@@ -34,9 +34,9 @@ header h1 {
     margin: 10px;
     border: 2px solid #2c3e50; 
     border-radius: 8px;
-    width: 30%; /* Adjust as needed to fit three in a row */
+    width: 30%; 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
-    flex: 1 1 30%; /* Flexbox property to ensure equal spacing */
+    flex: 1 1 30%; /* Flexbox property - equal spacing */
 }
 
 .assignment h2 {
@@ -55,9 +55,9 @@ header h1 {
 
 /* Assignment images styling */
 .assignment-image {
-    width: 250px; /* Reduced width */
-    height: 125px; /* Maintain 2:1 aspect ratio */
-    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    width: 300px; 
+    height: 150px; 
+    object-fit: cover; 
     margin-bottom: 15px;
     border-radius: 5px;
 }
@@ -70,7 +70,7 @@ footer {
     color: #afcbff; 
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for small screen */
 @media (max-width: 768px) {
     #assignments {
         flex-direction: column;
@@ -78,8 +78,8 @@ footer {
     }
 
     .assignment {
-        width: 90%; /* Full width for mobile view */
-        margin-bottom: 20px; /* Add margin between stacked items */
+        width: 90%; 
+        margin-bottom: 20px; 
     }
 
     .assignment-image {
