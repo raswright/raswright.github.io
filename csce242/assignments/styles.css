@@ -23,8 +23,8 @@ header h1 {
 /* Main content (assignments) styling */
 #assignments {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
@@ -40,18 +40,24 @@ header h1 {
 }
 
 .assignment h2 {
-    color: #1f3a93; 
+    color: #1f3a93;
+    margin-bottom: 10px;
 }
 
-.assignment p {
-    color: #eaeaea; 
-    line-height: 1.6;
+.assignment h2 a {
+    text-decoration: none;
+    color: #1f3a93;
+}
+
+.assignment h2 a:hover {
+    text-decoration: underline;
 }
 
 /* Assignment images styling */
 .assignment-image {
-    width: 300px; /* Set the width to 300px */
-    height: 150px; /* Set the height to 150px */
+    width: 300px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
     margin-bottom: 15px;
     border-radius: 5px;
 }
@@ -77,7 +83,7 @@ footer {
     }
 
     .assignment-image {
-        width: 100%; /* Set width to 100% to be responsive */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%;
+        height: auto;
     }
 }
