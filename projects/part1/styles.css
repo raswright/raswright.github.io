@@ -40,22 +40,6 @@ nav ul li a:hover {
     color: #3498db;
 }
 
-/* Slideshow container */
-.slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-}
-
-/* Hides images by default */
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    width: 100%;
-}
-
 /* Main content styling */
 main {
     margin: 20px auto;
