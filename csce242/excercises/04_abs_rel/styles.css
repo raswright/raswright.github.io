@@ -1,0 +1,63 @@
+/* Stucture */
+
+body {
+    background-color: rgb(24, 39, 39);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    background-color: white;
+}
+
+.columns-all {
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+#main-header {
+    position: relative;
+}
+
+/* Login Menu */
+#login-menu {
+    background: red;
+    width:fit-content;
+    position: absolute;
+    top: 3%
+    right 3%;
+}
+
+#login-menu ul {
+    padding-left:0;
+}
+#login-menu li {
+    list-style-type: none;
+}
+
+#login-menu a {
+    text-decoration: none;
+
+#login-menu a:hover {
+    text-decoration: underline;
+    color:brown;
+}
+}
+
+/* Larger Resolutions */
+@media only screen and (min-width: 600px) {
+    #content {
+        width:70%;
+        margin:auto;
+    }
+    .columns {
+        display: flex;
+    }
+
+    #settings {
+        display: none;
+    }
+}
