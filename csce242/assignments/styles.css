@@ -3,86 +3,105 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; 
-    color: #eaeaea; 
+    background-color: #1a1a1a;
+    color: #eaeaea;
 }
 
 /* Header styling */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #0a0a23; 
+    background-color: #0a0a23;
     color: #afcbff;
 }
 
 header h1 {
     margin: 0;
-    color: #1f3a93; 
+    color: #1f3a93;
 }
 
 /* Main content styling */
-#assignments {
+main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px;
 }
 
-.assignment {
-    background-color: #0a0a23; 
+.overview-item, .assignment, .project {
+    background-color: #0a0a23;
     padding: 15px;
     margin: 10px;
-    border: 2px solid #2c3e50; 
+    border: 2px solid #2c3e50;
     border-radius: 8px;
-    width: 30%; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
-    flex: 1 1 30%; /* Flexbox property - equal spacing */
+    width: 30%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    flex: 1 1 30%;
 }
 
-.assignment h2 {
+.overview-item h2, .assignment h2, .project h2 {
     color: #1f3a93;
     margin-bottom: 10px;
 }
 
-.assignment h2 a {
+.overview-item h2 a, .assignment h2 a, .project h2 a {
     text-decoration: none;
     color: #1f3a93;
 }
 
-.assignment h2 a:hover {
+.overview-item h2 a:hover, .assignment h2 a:hover, .project h2 a:hover {
     text-decoration: underline;
 }
 
-/* Assignment images styling */
-.assignment-image {
-    width: 300px; 
-    height: 150px; 
-    object-fit: cover; 
+/* Image styling */
+.overview-image, .assignment-image, .project-image {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
     margin-bottom: 15px;
     border-radius: 5px;
+}
+
+/* Removes border when image is clicked */
+a img {
+    border: none;
+}
+
+/* Project iframe stylings */
+.project-wireframe {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Footer styling */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #0a0a23; 
-    color: #afcbff; 
+    background-color: #0a0a23;
+    color: #afcbff;
 }
 
-/* Responsive design for small screen */
+/* Responsive design for small screens */
 @media (max-width: 768px) {
-    #assignments {
+    main {
         flex-direction: column;
         align-items: center;
     }
 
-    .assignment {
-        width: 90%; 
-        margin-bottom: 20px; 
+    .overview-item, .assignment, .project {
+        width: 90%;
+        margin-bottom: 20px;
     }
 
-    .assignment-image {
+    .overview-image, .assignment-image, .project-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-wireframe {
         width: 100%;
         height: auto;
     }
