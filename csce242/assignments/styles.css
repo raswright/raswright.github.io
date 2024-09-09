@@ -106,3 +106,15 @@ footer {
         height: auto;
     }
 }
+
+/* PDF styling */
+
+a {
+    color: #1f3a93;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #afcbff;
+}
