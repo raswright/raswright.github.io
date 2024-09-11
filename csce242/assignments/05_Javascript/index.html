@@ -1,0 +1,35 @@
+<!-- RaSean Wright -->
+<!DOCTYPE html>
+<head>
+    <title>Assignment 5 - JavaScript Buttons, Functions, and More </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Assignment 5</h1>
+    <h2>Introduction to JavaScript</h2>
+
+    <div class="container">
+        <div class="column" id="counter-column" onclick="incrementCounter()">
+            <h3>Count</h3>
+            <div id="count-display">0</div>
+        </div>
+
+        <div class="column" id="image-column">
+            <h3>Random Image</h3>
+            <img id="random-image" src="https://picsum.photos/200" alt="Random" onclick="refreshImage()">
+        </div>
+
+        <div class="column" id="slider-column">
+            <h3>Slider Move</h3>
+            <input type="range" id="slider" min="0" max="100" oninput="moveSquare(this.value)">
+            <div id="square">200 x 200</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 RaSean Wright</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
