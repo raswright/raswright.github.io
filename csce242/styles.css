@@ -23,53 +23,59 @@ header h1 {
 /* Main content styling */
 main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; 
     flex-wrap: wrap;
     padding: 20px;
+    gap: 40px; 
 }
 
-.overview-item, .assignment, .project {
+.overview-item {
+    flex: 1 1 45%; 
+}
+
+/* Assignment and project items */
+.assignment, .project {
     background-color: #0a0a23;
     padding: 15px;
     margin: 10px;
     border: 2px solid #2c3e50;
     border-radius: 8px;
-    width: 30%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    flex: 1 1 30%;
+    text-align: center;
 }
 
-.overview-item h2, .assignment h2, .project h2 {
+/* Styling for headers */
+.overview-item h2, .assignment h3, .project h3 {
     color: #1f3a93;
     margin-bottom: 10px;
 }
 
-.overview-item h2 a, .assignment h2 a, .project h2 a {
+.assignment h3 a, .project h3 a {
     text-decoration: none;
     color: #1f3a93;
 }
 
-.overview-item h2 a:hover, .assignment h2 a:hover, .project h2 a:hover {
+.assignment h3 a:hover, .project h3 a:hover {
     text-decoration: underline;
 }
 
 /* Image styling */
-.overview-image, .assignment-image, .project-image {
+.assignment-image, .project-image {
     width: 300px;
-    height: 200px; /* Updated size for uniformity */
+    height: 200px; /* Consistent size for uniformity */
     object-fit: cover;
     margin-bottom: 15px;
     border-radius: 5px;
 }
 
-/* Removes border when image is clicked */
+/* Removes border for when image is clicked */
 a img {
     border: none;
 }
 
 /* Footer styling */
 footer p {
-    color: white; /* Updated color to white */
+    color: white;
     font-size: 14px;
     margin-top: 20px;
 }
@@ -81,12 +87,12 @@ footer p {
         align-items: center;
     }
 
-    .overview-item, .assignment, .project {
+    .overview-item {
         width: 90%;
         margin-bottom: 20px;
     }
 
-    .overview-image, .assignment-image, .project-image {
+    .assignment-image, .project-image {
         width: 100%;
         height: auto;
     }
