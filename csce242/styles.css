@@ -12,12 +12,12 @@ header {
     text-align: center;
     padding: 20px;
     background-color: #0a0a23;
-    color: #afcbff;
+    color: #ffffff;
 }
 
 header h1 {
     margin: 0;
-    color: #1f3a93;
+    color: #afcbff;
 }
 
 /* Main content styling */
@@ -46,13 +46,13 @@ main {
 
 /* Styling for headers */
 .overview-item h2, .assignment h3, .project h3 {
-    color: #1f3a93;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
 .assignment h3 a, .project h3 a {
     text-decoration: none;
-    color: #1f3a93;
+    color: #afcbff;
 }
 
 .assignment h3 a:hover, .project h3 a:hover {
