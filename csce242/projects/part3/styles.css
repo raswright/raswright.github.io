@@ -3,81 +3,193 @@
     --secondary-color: #ecf0f1;
     --accent-color: #3498db;
     --text-color: #333;
-    --heading-font: 'Arial', sans-serif;
-    --body-font: 'Helvetica', sans-serif;
+    --light-gray: #f4f4f4;
+    --warning-color: red;
+    --light-red-bg: #ffe6e6;
+    --white: #fff;
+    --light-grey-text: #eaeaea;
+    --gray-text: #555;
+    --button-hover-color: #6fafd7;
+    --dashed-border-color: var(--primary-color);
+    --schedule-bg1: #62627f;
+    --schedule-bg2: #68939a;
+    ----hero-overlay-color: rgba(44, 62, 80, 0.7); 
+    --carousel-overlay-color: rgba(0, 0, 0, 0.1); 
 }
 
+/* Header Styling (Home Page) */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+}
 
-/* About Us Section Styling */
-.about-us {
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Navigation Styling (Home Page) */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--secondary-color); 
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color:  var(--button-hover-color)
+}
+
+/* Who we Are Section (Home Page) */
+.whoweare {
     text-align: center;
     padding: 40px;
-    background-color: #f4f4f4;
+    background-color: var(--secondary-color)
 }
 
-.about-us h2 {
+.whoweare h2 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.about-us p {
+.whoweare p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-.about-images {
+.whoweare-images {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.about-image {
+.whoweare-image {
     width: 400px;
     height: 250px;
     border-radius: 10px;
     object-fit: cover;
 }
 
-/* Why Choose Us Section */
+/* Client Success Stories Carousel (Home Page) */
+.client-carousel {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    max-width: 50%;
+    box-shadow: 0 4px 8px var(----hero-overlay-color)
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--carousel-overlay-color)
+    margin 0 10px;
+}
+
+.carousel-item:not(:first-child) {
+    display: none; 
+}
+
+body {
+    font-family: 'Arial',sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color)
+}
+
+/* Why Choose Us Section (Home Page) */
 .why-choose-us {
-    padding: 40px;
-    background-color: #ecf0f1;
+    padding: 50px;
+    background-color: var(--secondary-color); 
     text-align: center;
 }
 
 .why-choose-us h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem; 
+    margin-bottom: 40px;
+    color: var(--primary-color);
 }
 
 .why-choose-us ul {
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem; 
     padding: 0;
+    color: var(--text-color);
+    line-height: 1.8; 
 }
 
 .why-choose-us ul li {
-    margin: 10px 0;
+    margin: 15px 0; 
 }
 
-.choose-us-images {
+/* Image/Text Container (Home Page) */
+.why-choose-us-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 40px; 
+    margin-top: -30px;
 }
 
-.choose-us-images img {
+.why-choose-us-image {
     width: 200px;
     height: 200px;
     border-radius: 10px;
+    margin-bottom: 30px;
+    object-fit: cover;
+
 }
 
-/* Call-to-Action Section */
+.left-image {
+    justify-content: flex-start; 
+}
+
+.right-image {
+    justify-content: flex-end; 
+}
+
+/* Responsive Design (Home Page) */
+@media (max-width: 768px) {
+    .why-choose-us-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-choose-us-image {
+        width: 150px; 
+        height: 150px;
+    }
+}
+
+/* Call-to-Action Section (Home Page) */
 .call-to-action {
     text-align: center;
     padding: 40px;
-    background-color: #3498db;
+    background-color: var(--accent-color);
     color: #fff;
 }
 
@@ -92,8 +204,8 @@
 }
 
 .cta-button {
-    background-color: #fff;
-    color: #3498db;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -101,117 +213,11 @@
 }
 
 .cta-button:hover {
-    background-color: #2980b9;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
-
-/* Client Success Stories Carousel */
-.client-carousel {
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ecf0f1;
-    border-radius: 10px;
-    max-width: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel-item {
-    flex: 1;
-    padding: 15px;
-    font-size: 1.2em;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 0 10px;
-}
-
-.carousel-item:not(:first-child) {
-    display: none; /* Initial hide for other items */
-}
-
-
-body {
-    font-family: 'Arial',sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333
-}
-
-/* Header Styling */
-header {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-/* Navigation Styling */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-/* Updated Navigation Link Colors for Better Visibility */
-nav ul li a {
-    color: #ecf0f1; /* Light color for better visibility */
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-nav ul li a:hover {
-    color: #3498db; /* Lighter blue when hovering over the link */
-}
-
-/* Four Corner Sections */
-.corner-sections {
-    display: flex;
-    justify-content: space-around; /* Spread out the corner sections */
-    flex-wrap: wrap;
-    padding: 40px 20px;
-    margin-bottom: 30px;
-}
-
-.corner-item {
-    width: 25%; /* Adjusted width for better balance */
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    text-align: center; /* Center text inside each corner box */
-}
-
-.corner-item h3 {
-    font-size: 1.5em;
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-.corner-item p {
-    font-size: 1rem;
-}
-
-/* Hero Section Styling */
+/* Hero Section (Home Page) */
 .hero {
     background-image: url('https://via.placeholder.com/1200x400');
     background-size: cover;
@@ -225,7 +231,7 @@ nav ul li a:hover {
 }
 
 .hero-content {
-    background-color: rgba(44, 62, 80, 0.7);
+    background-color: var(----hero-overlay-color);
     padding: 30px;
     border-radius: 10px;
 }
@@ -248,32 +254,48 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    width: 100%; 
+    max-width: 300px; 
 }
 
 .cta-button:hover {
-    background-color: #1a5981;
+    background-color: var(--primary-color);
 }
-/* Services Section Styling */
+
+/* Responsive Design (Home Page) */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .cta-button {
+        width: 100%; 
+        padding: 8px 15px; 
+    }
+}
+
+/* Services Section Styling (Services Page) */
 .services-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    justify-content: center; 
 }
 
 .service-item {
     position: relative;
-    background-color: #262626; /* Dark grey to match main page */
     padding: 20px;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
     text-align: center;
+    max-width: 400px; 
+    margin: 0 auto; 
 }
 
 .service-item:hover {
-    background-color: #3498db;
+    background-color: var(--accent-color);
     color: white;
 }
 
@@ -288,7 +310,7 @@ nav ul li a:hover {
 
 .service-item .summary {
     margin-bottom: 10px;
-    color: #eaeaea; /* Light grey for text */
+    color: var(--light-grey-text)
 }
 
 .service-item img.small-img {
@@ -304,121 +326,83 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Individual Section Colors */
-.fitness { background-color: #62627f; }
-.wellness { background-color: #68939a; }
-.nutrition { background-color: #62627f; }
-.personal-training { background-color: #68939a; }
-.group-classes { background-color: #68939a; }
-.yogat { background-color: #62627f; }
+/* Individual Section Colors (Services Page) */
+.fitness { background-color: var(--schedule-bg1); }
+.wellness { background-color: var(--schedule-bg2); }
+.nutrition { background-color: var(--schedule-bg1); }
+.personal-training { background-color: var(--schedule-bg2); }
+.group-classes { background-color: var(--schedule-bg2); }
+.meditation { background-color: var(--schedule-bg1); }
+.mental-health { background-color: var(--schedule-bg2); }
+.outdoor { background-color: var(--schedule-bg1); }
 
-.mental-health { background-color: #68939a; }
-.outdoor { background-color: #62627f; }
-
-/* Footer styling */
-footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Responsive Design */
+/* Responsive Design (Services Page) */
 @media (max-width: 768px) {
-    .services-section {
+
+    .services-section  {
         grid-template-columns: 1fr;
+        justify-content: center; 
     }
-}
 
-/* Clientele Section - Centered in Between Corners */
-.clientele-section {
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ecf0f1;
-    border-radius: 10px;
-    max-width: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: -10px;
-}
+    .service-item {
+        width: 90%; 
+        margin: 0 auto 20px auto; 
+    }
 
-/* Client List Styling */
-.client-list {
-    list-style-type: none;
-    padding: 0;
+    .service-item img {
+        max-width: 80%; 
+ }
 }
-
-.client-list li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    margin: 15px 0;
-}
-
-/* Placeholder for small client images */
-.square {
-    display: inline-block;
-    width: 50px;  /* Adjust size for image placeholders */
-    height: 50px;
-    background-image: url('https://via.placeholder.com/50x50'); /* Image placeholder */
-    background-size: cover;
-    margin-left: 10px;
-    border-radius: 3px;
-}
-
-/* About Us Page Styling */
-.about-section {
+    
+/* Our Mission (About Us Page) */ 
+.mission-section {
     text-align: center;
     padding: 10px;
     margin: 20px 0;
 }
 
-.about-section h2 {
+.mission-section h2 {
     font-size: 2.2rem;
     margin-bottom: 30px;
 }
 
-.about-section p {
+.mission-section p {
     font-size: 1.2rem;
 }
 
-
-/* Founding Story Styling */
-.about-section.founding-section {
-    background-color: #2c3e50;
-    padding: 30px;
-    border: 2px dashed var(--primary-color); /* Dashed border for visual contrast */
-    margin-bottom: 40px;
-    font-style: italic; /* Italicize for a different tone */
-}
-
-.founding-section p {
-    font-size: 1.2rem;
-    color: #fff; /* Darker text color for contrast */
-}
-
-.founding-section h2 {
-    color: #3498db;
-}
-
-
-/* Image Styling */
-.about-images {
+/* Our Mission Images Section (About Us Page) */
+.mission-images {
     display: flex;
     justify-content: space-evenly;
     margin: 30px 0;
 }
 
-.about-image {
+.mission-image {
     width: 300px;
     height: 200px;
     border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px var(--carousel-overlay-color);
 }
 
-/* Social Media Section */
+/* Founding Story Styling (About Us Page) */
+.mission-section.founding-section {
+    background-color: var(--primary-color);
+    padding: 30px;
+    border: 2px dashed var(--primary-color); 
+    margin-bottom: 40px;
+    font-style: italic; 
+}
+
+.founding-section p {
+    font-size: 1.2rem;
+    color: #fff; 
+}
+
+.founding-section h2 {
+    color: var(--accent-color);
+}
+
+/* Social Media Section (About Us Page) */
 .social-media {
     text-align: center;
     margin: 40px 0;
@@ -434,10 +418,10 @@ footer {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px var(--carousel-overlay-color)
 }
 
-/* Contact Section */
+/* Contact Section (About Us Page) */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -452,7 +436,7 @@ footer {
 .contact-form input[type="email"],
 .contact-form textarea {
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--light-grey-text);
     border-radius: 5px;
     font-size: 1.2rem;
 }
@@ -465,7 +449,7 @@ footer {
 .submit-button {
     padding: 15px 20px;
     background-color: var(--accent-color);
-    color: #fff;
+    color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -473,69 +457,29 @@ footer {
 }
 
 .submit-button:hover {
-    background-color: #2980b9;
+    background-color: var(--accent-color);
 }
 
-/* Footer Styling */
+/* Footer Styling (About Us Page) */
 footer {
-    background-color: #2c3e50;
-    color: #ecf0f1
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
     text-align center;
     padding: 20px;
     margin-top: 40px;
 }
 
-/* Home Footer styling */
-footer p {
-    color: #ecf0f1; /* Change this to the color you want */
-    font-size: 14px;
-    margin-top: 20px;
-    text-align: left;
-}
-
-
-/* Responsive Design */
+/* Responsive Design (About Us Page) */
 @media (max-width: 768px) {
     nav ul li {
         display: block;
         margin: 10px 0;
     }
 
-    .corner-sections {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .corner-item {
-        width: 90%;
-    }
-
-    .client-list li {
-        font-size: 1.1em;
-    }
-
-    .square {
-        width: 40px;
-        height: 40px;
-    }
-
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
     .about-images {
         flex-direction: column;
         align-items: center;
+        gap: 20px
     }
 
     .about-image {
@@ -546,54 +490,49 @@ footer p {
 
     .social-icons {
         flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .social-icon {
+        margin-bottom: 10px;
     }
 }
 
 
-/* Ensure Clientele section stays centered on small screens */
-.clientele-section {
-    max-width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-/* Styling for the booking section */
-/* General table styling */
+/* Tables Styling (Schedule Page)*/
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 15px 0;
     font-size: 14px;
     text-align: left;
+    color: var(--gray-text)
 }
 
 table tr {
-    background-color: #f4f4f4; /* Light gray background for all rows */
+    background-color: lightgray;
 }
 
 table th, table td {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--secondary-color);
 }
 
-/* Header (th) styling */
 table th {
-    background-color: #3498db;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: white;
     font-size: 16px;
     text-transform: uppercase;
 }
 
-/* Alternating row colors */
 table tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: lightgray;
 }
 
-/* Book Now button styling */
 .book-btn {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: white;
     padding: 8px 15px;
     border: none;
     border-radius: 5px;
@@ -601,56 +540,66 @@ table tr:nth-child(even) {
     transition: background-color 0.3s ease;
 }
 
-/* Booked text styling */
 .booked {
-    color: red;
+    color: var(--warning-color);
     font-weight: bold;
-    background-color: #ffe6e6; /* Light red background */
-    padding: 5px;
+    background-color: var(--light-red-bg)
+    padding 5px;
     border-radius: 5px;
 }
 
-/* Optional: You can use an icon instead of plain text for booked classes */
 .booked::before {
-    content: "⚠ "; /* Warning icon */
+    content: " X "; 
 }
 
 .book-btn:hover {
-    background-color: #3498db;
+    background-color: var(--accent-color);
 }
 
-/* Styling for individual class sections */
+/* Responsive design */
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .book-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Individual Class Sections (Schedule Page) */
 .class-section {
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
 }
 
-/* Different background colors for each class section */
 .yoga {
-    background-color: #68939a; 
+    background-color: var(--schedule-bg2); 
 }
 
 .pilates {
-    background-color: #62627f; 
+    background-color: var(--schedule-bg1); 
 }
 
 .running {
-    background-color: #68939a; 
+    background-color: var(--schedule-bg2); 
 }
 
-.spin {
-    background-color: #62627f; 
+.cycling {
+    background-color: var(--schedule-bg1); 
 }
 
 .zumba {
-    background-color: #68939a; 
+    background-color: var(--schedule-bg2); 
 }
 .bodypump {
-    background-color: #62627f; 
+    background-color: var(--schedule-bg1); 
 }
 
-/* Blog Section Styling */
+/* Blog Stylings (Blog Page) */
 .blog-section {
     margin: 20px auto;
     max-width: 1200px;
@@ -660,18 +609,18 @@ table tr:nth-child(even) {
 
 .blog-section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-/* Blog Post Styling */
-/* Featured Blog Post */
+/* Featured Blog Post(s) (Blog Page) */
 .featured-post {
     display: flex;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: lightgray;
     padding: 20px;
     margin-bottom: 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px --carousel-overlay-color;
 }
 
 .featured-image {
@@ -693,41 +642,29 @@ table tr:nth-child(even) {
 
 .featured-content p {
     font-size: 1.2rem;
-    color: #555;
+    color: var(--text-color)
 }
 
 .featured-content .read-more {
-    background-color: #3498db;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .featured-content .read-more:hover {
-    background-color: #2980b9;
+    background-color: var(--accent-color)
 }
 
-/* Blog Section Styling */
-.blog-section {
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-.blog-section h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
+/* Blog Stylings Addition (Blog Page) */
 .blog-post {
     display: flex;
     margin-bottom: 30px;
     padding: 15px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px var(--carousel-overlay-color);
 }
 
 .blog-post.reverse {
@@ -749,12 +686,12 @@ table tr:nth-child(even) {
 .blog-content h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #2c3e50;
+    color: var(--primary-color)
 }
 
 .blog-content p {
     font-size: 1rem;
-    color: #555;
+    color: var(--text-color)
 }
 
 .blog-tags {
@@ -762,7 +699,7 @@ table tr:nth-child(even) {
 }
 
 .blog-tags span {
-    background-color: #3498db;
+    background-color: var(--accent-color);
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -770,7 +707,7 @@ table tr:nth-child(even) {
 }
 
 .read-more {
-    color: #3498db;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -781,14 +718,14 @@ table tr:nth-child(even) {
     text-decoration: underline;
 }
 
-/* Load More Button */
+/* Load More Button (Blog Page) */
 .load-more {
     text-align: center;
     margin: 30px 0;
 }
 
 .load-more button {
-    background-color: #3498db;
+    background-color: var(--accent-color);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -797,35 +734,17 @@ table tr:nth-child(even) {
 }
 
 .load-more button:hover {
-    background-color: #2980b9;
+    background-color: var(--accent-color);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .blog-post, .featured-post {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .blog-image, .featured-image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .featured-content {
-        text-align: center;
-    }
-}
-
-/* Interactive Quiz Styling */
+/* Interactive Quiz (Blog Page) */
 .interactive-quiz {
-    background-color: #5fabf8;
+    background-color: var(--accent-color);
     padding: 30px;
     text-align: center;
     border-radius: 8px;
     margin-top: 40px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px var(--carousel-overlay-color)
 }
 
 .interactive-quiz h2 {
@@ -842,7 +761,7 @@ table tr:nth-child(even) {
 .interactive-quiz button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: var(--accent-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -850,39 +769,48 @@ table tr:nth-child(even) {
 }
 
 .interactive-quiz button:hover {
-    background-color: #2980b9;
+    background-color: var(--primary-color);
 }
 
-
-
-/* Responsive Design */
+/* Responsive Design (Blog Page) */
 @media (max-width: 768px) {
-    .blog-post {
+    .blog-post, .featured-post {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        width: 100%; 
+        max-width: 100%; 
+        margin: 0 auto; 
     }
 
-    .blog-image {
-        width: 100%;
+    .blog-image, .featured-image {
+        width: 100%; 
+        height: auto;
         margin-bottom: 20px;
+    }
+
+    .featured-content {
+        text-align: center;
+        width: 100%; 
     }
 
     .blog-content {
         text-align: center;
+        width: 100%; 
+    }
+
+    /* Interactive Quiz (Blog Page) */
+    .interactive-quiz {
+        padding: 20px;
+        width: 100%; 
+    }
+
+    .interactive-quiz button {
+        width: 100%; 
     }
 }
 
-
-
-/* Responsive design */
-@media (max-width: 768px) {
-    table th, table td {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    .book-btn {
-        padding: 6px 10px;
-        font-size: 12px;
-    }
+footer p {
+    color: white;
+    text-align: center;
 }
