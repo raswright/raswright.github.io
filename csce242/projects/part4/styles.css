@@ -1,0 +1,816 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --warning-color: red;
+    --light-red-bg: #ffe6e6;
+    --white: #fff;
+    --light-grey-text: #eaeaea;
+    --gray-text: #555;
+    --button-hover-color: #6fafd7;
+    --dashed-border-color: var(--primary-color);
+    --schedule-bg1: #62627f;
+    --schedule-bg2: #68939a;
+    ----hero-overlay-color: rgba(44, 62, 80, 0.7); 
+    --carousel-overlay-color: rgba(0, 0, 0, 0.1); 
+}
+
+/* Header Styling (Home Page) */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Navigation Styling (Home Page) */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--secondary-color); 
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color:  var(--button-hover-color)
+}
+
+/* Who we Are Section (Home Page) */
+.whoweare {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--secondary-color)
+}
+
+.whoweare h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.whoweare p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.whoweare-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.whoweare-image {
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Client Success Stories Carousel (Home Page) */
+.client-carousel {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    max-width: 50%;
+    box-shadow: 0 4px 8px var(----hero-overlay-color)
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--carousel-overlay-color)
+    margin 0 10px;
+}
+
+.carousel-item:not(:first-child) {
+    display: none; 
+}
+
+body {
+    font-family: 'Arial',sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color)
+}
+
+/* Why Choose Us Section (Home Page) */
+.why-choose-us {
+    padding: 50px;
+    background-color: var(--secondary-color); 
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.why-choose-us ul {
+    list-style-type: none;
+    font-size: 1.5rem; 
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.8; 
+}
+
+.why-choose-us ul li {
+    margin: 15px 0; 
+}
+
+/* Image/Text Container (Home Page) */
+.why-choose-us-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 40px; 
+    margin-top: -30px;
+}
+
+.why-choose-us-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    object-fit: cover;
+
+}
+
+.left-image {
+    justify-content: flex-start; 
+}
+
+.right-image {
+    justify-content: flex-end; 
+}
+
+/* Responsive Design (Home Page) */
+@media (max-width: 768px) {
+    .why-choose-us-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-choose-us-image {
+        width: 150px; 
+        height: 150px;
+    }
+}
+
+/* Call-to-Action Section (Home Page) */
+.call-to-action {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.call-to-action h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.call-to-action p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+/* Hero Section (Home Page) */
+.hero {
+    background-image: url('images/Main\ Logo\ \(Home\).jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.hero-content {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%; 
+    max-width: 300px; 
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Responsive Design (Home Page) */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .cta-button {
+        width: 100%; 
+        padding: 8px 15px; 
+    }
+}
+
+/* Services Section Styling (Services Page) */
+.services-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; 
+}
+
+.service-item {
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+.service-item:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.service-item .more-info {
+    display: none;
+    padding-top: 15px;
+}
+
+.service-item:hover .more-info {
+    display: block;
+}
+
+.service-item .summary {
+    margin-bottom: 10px;
+    color: var(--light-grey-text)
+}
+
+.service-item img.small-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Individual Section Colors (Services Page) */
+.fitness { background-color: var(--schedule-bg1); }
+.wellness { background-color: var(--schedule-bg2); }
+.nutrition { background-color: var(--schedule-bg1); }
+.personal-training { background-color: var(--schedule-bg2); }
+.group-classes { background-color: var(--schedule-bg2); }
+.meditation { background-color: var(--schedule-bg1); }
+.mental-health { background-color: var(--schedule-bg2); }
+.outdoor { background-color: var(--schedule-bg1); }
+
+/* Responsive Design (Services Page) */
+@media (max-width: 768px) {
+
+    .services-section  {
+        grid-template-columns: 1fr;
+        justify-content: center; 
+    }
+
+    .service-item {
+        width: 90%; 
+        margin: 0 auto 20px auto; 
+    }
+
+    .service-item img {
+        max-width: 80%; 
+ }
+}
+    
+/* Our Mission (About Us Page) */ 
+.mission-section {
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.mission-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.mission-section p {
+    font-size: 1.2rem;
+}
+
+/* Our Mission Images Section (About Us Page) */
+.mission-images {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+}
+
+.mission-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px var(--carousel-overlay-color);
+}
+
+/* Founding Story Styling (About Us Page) */
+.mission-section.founding-section {
+    background-color: var(--primary-color);
+    padding: 30px;
+    border: 2px dashed var(--primary-color); 
+    margin-bottom: 40px;
+    font-style: italic; 
+}
+
+.founding-section p {
+    font-size: 1.2rem;
+    color: #fff; 
+}
+
+.founding-section h2 {
+    color: var(--accent-color);
+}
+
+/* Social Media Section (About Us Page) */
+.social-media {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px var(--carousel-overlay-color)
+}
+
+/* Contact Section (About Us Page) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1.5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid var(--light-grey-text);
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.submit-button {
+    padding: 15px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.submit-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Footer Styling (About Us Page) */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+    text-align center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Design (About Us Page) */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .about-images {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px
+    }
+
+    .about-image {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .social-icon {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Tables Styling (Schedule Page)*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 14px;
+    text-align: left;
+    color: var(--gray-text)
+}
+
+table tr {
+    background-color: lightgray;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+}
+
+table th {
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.book-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booked {
+    color: var(--warning-color);
+    font-weight: bold;
+    background-color: var(--light-red-bg)
+    padding 5px;
+    border-radius: 5px;
+}
+
+.booked::before {
+    content: " X "; 
+}
+
+.book-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .book-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Individual Class Sections (Schedule Page) */
+.class-section {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.yoga {
+    background-color: var(--schedule-bg2); 
+}
+
+.pilates {
+    background-color: var(--schedule-bg1); 
+}
+
+.running {
+    background-color: var(--schedule-bg2); 
+}
+
+.cycling {
+    background-color: var(--schedule-bg1); 
+}
+
+.zumba {
+    background-color: var(--schedule-bg2); 
+}
+.bodypump {
+    background-color: var(--schedule-bg1); 
+}
+
+/* Blog Stylings (Blog Page) */
+.blog-section {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Featured Blog Post(s) (Blog Page) */
+.featured-post {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px --carousel-overlay-color;
+}
+
+.featured-image {
+    width: 50%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.featured-content {
+    flex: 1;
+    text-align: left;
+}
+
+.featured-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.featured-content p {
+    font-size: 1.2rem;
+    color: var(--text-color)
+}
+
+.featured-content .read-more {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.featured-content .read-more:hover {
+    background-color: var(--accent-color)
+}
+
+/* Blog Stylings Addition (Blog Page) */
+.blog-post {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--carousel-overlay-color);
+}
+
+.blog-post.reverse {
+    flex-direction: row-reverse;
+}
+
+.blog-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.blog-content {
+    text-align: left;
+}
+
+.blog-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color)
+}
+
+.blog-content p {
+    font-size: 1rem;
+    color: var(--text-color)
+}
+
+.blog-tags {
+    margin-top: 10px;
+}
+
+.blog-tags span {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.read-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Load More Button (Blog Page) */
+.load-more {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.load-more button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.load-more button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Interactive Quiz (Blog Page) */
+.interactive-quiz {
+    background-color: var(--accent-color);
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0px 4px 6px var(--carousel-overlay-color)
+}
+
+.interactive-quiz h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.interactive-quiz form {
+    font-size: 1.2em;
+    display: inline-block;
+    text-align: left;
+}
+
+.interactive-quiz button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.interactive-quiz button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Responsive Design (Blog Page) */
+@media (max-width: 768px) {
+    .blog-post, .featured-post {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%; 
+        max-width: 100%; 
+        margin: 0 auto; 
+    }
+
+    .blog-image, .featured-image {
+        width: 100%; 
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .featured-content {
+        text-align: center;
+        width: 100%; 
+    }
+
+    .blog-content {
+        text-align: center;
+        width: 100%; 
+    }
+
+    /* Interactive Quiz (Blog Page) */
+    .interactive-quiz {
+        padding: 20px;
+        width: 100%; 
+    }
+
+    .interactive-quiz button {
+        width: 100%; 
+    }
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
