@@ -274,60 +274,88 @@ body {
 }
 
 /* Services Section Styling (Services Page) */
+/* Services Section Styling (Services Page) */
 .services-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    justify-content: center; 
+    justify-content: center;
 }
 
+/* Service Item Styling */
 .service-item {
     position: relative;
-    padding: 20px;
-    width: 300px;
+    padding: 0;
+    width: 100%;
     height: 300px;
-    border-radius: 8px;
     overflow: hidden;
-    transition: all 0.3s ease;
-    cursor: pointer;
     text-align: center;
-    max-width: 400px; 
-    margin: 0 auto; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    background-color: var(--schedule-bg1);
 }
 
 .service-item:hover {
     background-color: var(--accent-color);
-    color: white;
 }
 
-.service-item .more-info {
+/* Initially hide the more-info section */
+.more-info {
     display: none;
-    padding-top: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
+/* Show more-info and scale image on hover */
 .service-item:hover .more-info {
     display: block;
+    opacity: 1;
 }
 
-.service-item .summary {
-    margin-bottom: 10px;
-    color: var(--light-grey-text)
-}
-
-.service-item img.small-img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
-}
-
-.service-item img {
-    max-width: 100%;
+.service-icon {
+    width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-
 }
+
+.service-item:hover .service-icon {
+    transform: scale(1.1);
+}
+
+/* Hover Image inside the more-info */
+.service-hover-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-section {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .service-icon {
+        max-width: 80%;
+    }
+}
+
+
 
 /* Individual Section Colors (Services Page) */
 .fitness { background-color: var(--schedule-bg1); }
@@ -339,23 +367,6 @@ body {
 .mental-health { background-color: var(--schedule-bg2); }
 .outdoor { background-color: var(--schedule-bg1); }
 
-/* Responsive Design (Services Page) */
-@media (max-width: 768px) {
-
-    .services-section  {
-        grid-template-columns: 1fr;
-        justify-content: center; 
-    }
-
-    .service-item {
-        width: 90%; 
-        margin: 0 auto 20px auto; 
-    }
-
-    .service-item img {
-        max-width: 80%; 
- }
-}
     
 /* Our Mission (About Us Page) */ 
 .mission-section {
