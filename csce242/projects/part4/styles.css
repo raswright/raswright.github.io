@@ -287,7 +287,7 @@ body {
     position: relative;
     padding: 20px;
     width: 100%;
-    height: 300px;
+    height: 350px; /* Maintain increased height */
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -296,7 +296,7 @@ body {
     cursor: pointer;
 }
 
-/* Default image size and title */
+/* Title and image default state */
 .service-item h3 {
     margin-bottom: 10px;
     font-size: 1.5rem;
@@ -309,10 +309,10 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hidden content for more-info */
+/* Hidden content (hover state) */
 .service-item .more-info {
     display: none;
-    padding: 10px;
+    padding: 10px; 
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
@@ -320,14 +320,32 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
-/* Hover Effect: Show more-info and hide the main image */
+/* Ensure text wraps and fits inside the container */
+.service-item .more-info p {
+    font-size: 1rem;
+    color: white;
+    text-align: center; /* Center the text */
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Ensures text wraps properly */
+    max-width: 90%; /* Limits text width to prevent overflow */
+    overflow-wrap: break-word; /* Break long words if needed */
+}
+
+/* Hover Effect */
 .service-item:hover .more-info {
-    display: block;
+    display: flex;
     opacity: 1;
+    text-align: center;
+    padding: 10px; /* Adjust to ensure enough space */
 }
 
 .service-item:hover img.service-icon {
@@ -335,18 +353,13 @@ body {
     transform: scale(1.1);
 }
 
-/* Ensure text remains readable */
-.service-item .more-info p {
-    font-size: 1rem;
-    color: white;
-}
-
-/* Hover Image inside the more-info (optional) */
+/* Hover image in more-info */
 .service-item .more-info img {
     width: 100%;
-    height: 150px;
+    height: 150px; /* Consistent image size */
     object-fit: cover;
     margin-top: 10px;
+    border-radius: 8px;
 }
 
 /* Responsive Design */
@@ -360,6 +373,7 @@ body {
         margin: 0 auto 20px auto;
     }
 }
+
 
     
 /* Our Mission (About Us Page) */ 
