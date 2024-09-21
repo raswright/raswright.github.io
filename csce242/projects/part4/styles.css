@@ -274,7 +274,7 @@ body {
 }
 
 /* Services Section Styling (Services Page) */
-/* Services Section Styling (Services Page) */
+/* Services Section Styling */
 .services-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -283,63 +283,73 @@ body {
     justify-content: center;
 }
 
-/* Service Item Styling */
 .service-item {
     position: relative;
-    padding: 0;
+    padding: 20px;
     width: 100%;
     height: 300px;
+    border-radius: 8px;
     overflow: hidden;
+    transition: all 0.3s ease;
     text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
     background-color: var(--schedule-bg1);
+    cursor: pointer;
 }
 
-.service-item:hover {
-    background-color: var(--accent-color);
+/* Default image size and title */
+.service-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
 }
 
-/* Initially hide the more-info section */
-.more-info {
+.service-item img.service-icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hidden content for more-info */
+.service-item .more-info {
     display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
     color: white;
-    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     transition: opacity 0.3s ease;
+    opacity: 0;
 }
 
-/* Show more-info and scale image on hover */
+/* Hover Effect: Show more-info and hide the main image */
 .service-item:hover .more-info {
     display: block;
     opacity: 1;
 }
 
-.service-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.service-item:hover .service-icon {
+.service-item:hover img.service-icon {
+    opacity: 0;
     transform: scale(1.1);
 }
 
-/* Hover Image inside the more-info */
-.service-hover-image {
+/* Ensure text remains readable */
+.service-item .more-info p {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Hover Image inside the more-info (optional) */
+.service-item .more-info img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     margin-top: 10px;
 }
 
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .services-section {
         grid-template-columns: 1fr;
@@ -347,25 +357,9 @@ body {
 
     .service-item {
         width: 90%;
-        margin: 0 auto;
-    }
-
-    .service-icon {
-        max-width: 80%;
+        margin: 0 auto 20px auto;
     }
 }
-
-
-
-/* Individual Section Colors (Services Page) */
-.fitness { background-color: var(--schedule-bg1); }
-.wellness { background-color: var(--schedule-bg2); }
-.nutrition { background-color: var(--schedule-bg1); }
-.personal-training { background-color: var(--schedule-bg2); }
-.group-classes { background-color: var(--schedule-bg2); }
-.meditation { background-color: var(--schedule-bg1); }
-.mental-health { background-color: var(--schedule-bg2); }
-.outdoor { background-color: var(--schedule-bg1); }
 
     
 /* Our Mission (About Us Page) */ 
