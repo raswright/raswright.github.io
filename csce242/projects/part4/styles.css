@@ -274,7 +274,6 @@ body {
 }
 
 /* Services Section Styling (Services Page) */
-/* Services Section Styling */
 .services-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -303,8 +302,8 @@ body {
 }
 
 .service-item img.service-icon {
-    width: 300px;
-    height: 3000px;
+    width: 900px;
+    height: 900px;
     margin: 0 auto 10px auto; /* Ensure image is centered */
     display: block;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -361,7 +360,7 @@ body {
     object-fit: cover;
     margin-top: 10px;
     border-radius: 8px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 /* Remove repeated title on hover */
