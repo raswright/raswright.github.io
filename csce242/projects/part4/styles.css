@@ -302,8 +302,8 @@ body {
 }
 
 .service-item img.service-icon {
-    width: 900px;
-    height: 900px;
+    width: 600px;
+    height: 600px;
     margin: 0 auto 10px auto; /* Ensure image is centered */
     display: block;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -360,7 +360,7 @@ body {
     object-fit: cover;
     margin-top: 10px;
     border-radius: 8px;
-    margin-left: 0px;
+    margin-left: -20px;
 }
 
 /* Remove repeated title on hover */
