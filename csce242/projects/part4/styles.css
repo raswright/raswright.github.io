@@ -303,8 +303,8 @@ body {
 }
 
 .service-item img.service-icon {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 3000px;
     margin: 0 auto 10px auto; /* Ensure image is centered */
     display: block;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -361,12 +361,19 @@ body {
     object-fit: cover;
     margin-top: 10px;
     border-radius: 8px;
+    margin-left: 10px;
 }
 
 /* Remove repeated title on hover */
 .service-item:hover h3 {
-    display: none; /* Hide the title to avoid repetition */
+    color: #333; /* Make the title text darker for readability on white background */
+    font-size: 1.7rem;
+    position: relative;
+    top: -20px; /* Slightly move the title upwards to give more space */
+    z-index: 1; /* Ensure the title is always on top */
+    display: block; /* Ensure the title remains visible during hover */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
