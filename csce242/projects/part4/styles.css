@@ -352,6 +352,15 @@ body {
     overflow-wrap: break-word;
 }
 
+.service-item img.service-icon {
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    width: 100%; /* Ensures it takes up the container width */
+    max-width: 250px; /* Sets a maximum width to keep it well-contained */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
 /* Hover Effect */
 .service-item:hover .more-info {
     display: flex;
