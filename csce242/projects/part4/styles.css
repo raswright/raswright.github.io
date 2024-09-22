@@ -50,19 +50,20 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color:  var(--button-hover-color)
+    color:  var(--button-hover-color);
 }
 
 /* Who we Are Section (Home Page) */
 .whoweare {
     text-align: center;
     padding: 40px;
-    background-color: var(--secondary-color)
+    background-color: var(--secondary-color);
 }
 
 .whoweare h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: var(--primary-color);
 }
 
 .whoweare p {
@@ -88,7 +89,7 @@ nav ul li a:hover {
     text-align: center;
     margin: 40px auto;
     padding: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--schedule-bg1);
     border-radius: 10px;
     max-width: 50%;
     box-shadow: 0 4px 8px var(----hero-overlay-color)
@@ -191,7 +192,7 @@ body {
 .call-to-action {
     text-align: center;
     padding: 40px;
-    background-color: var(--accent-color);
+    background-color: var(--schedule-bg2);
     color: #fff;
 }
 
@@ -207,7 +208,7 @@ body {
 
 .cta-button {
     background-color: var(--secondary-color);
-    color: var(--accent-color);
+    color: var(--primary-color);
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -232,6 +233,7 @@ body {
     text-align: center;
 }
 
+
 .hero-content {
     padding: 30px;
     border-radius: 10px;
@@ -241,20 +243,22 @@ body {
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 5px var(--primary-color)
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.7rem;
+    margin-bottom: -40px;
 }
 
 .cta-button {
     display: inline-block;
+    margin-top: 50px;
     padding: 10px 20px;
-    background-color: var(--accent-color);
+    background-color: var(--schedule-bg2);
     color: var(--secondary-color);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-weight: bold;
     width: 100%; 
     max-width: 300px; 
