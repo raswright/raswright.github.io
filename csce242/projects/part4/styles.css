@@ -52,6 +52,68 @@ nav ul li a:hover {
     color:  var(--button-hover-color);
 }
 
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Hamburger Styling (Home Page) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Small Screen (Home Page) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    #menu-toggle:checked + .hamburger-menu + .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+    }
+}
+
 /* Who we Are Section (Home Page) */
 .whoweare {
     text-align: center;
@@ -74,13 +136,15 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .whoweare-image {
     width: 400px;
-    height: 250px;
+    height: auto;
     border-radius: 10px;
     object-fit: cover;
+    max-width: 100%;
 }
 
 /* Client Success Stories Carousel (Home Page) */
@@ -191,7 +255,19 @@ body {
         width: 150px; 
         height: 150px;
     }
+
+    .whoweare-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+    }
+
+    .whoweare-image {
+        width: 90%;
+        margin: 0 auto; /* Center the image */
+    }
+
+    
 }
+
 
 /* Call-to-Action Section (Home Page) */
 .call-to-action {
@@ -235,6 +311,8 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--secondary-color);
+    width: 100%;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -281,6 +359,9 @@ body {
     .cta-button {
         width: 100%; 
         padding: 8px 15px; 
+    }
+    .hero {
+        height: 300px; /* Adjust the height for smaller screens */
     }
 }
 
@@ -492,6 +573,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-form label {
@@ -505,6 +588,7 @@ body {
     border: 1px solid var(--light-grey-text);
     border-radius: 5px;
     font-size: 1.2rem;
+    width: 110%
 }
 
 .contact-form textarea {
@@ -562,6 +646,11 @@ footer {
 
     .social-icon {
         margin-bottom: 10px;
+    }
+
+    .contact-form {
+        width: 90%; /* Shrink form width on smaller screens */
+        margin: 0 auto;
     }
 }
 
@@ -740,6 +829,8 @@ table tr:nth-child(even) {
 /* Blog Stylings Addition (Blog Page) */
 .blog-post {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 30px;
     padding: 15px;
     background-color: white;
@@ -753,13 +844,14 @@ table tr:nth-child(even) {
 
 .blog-image {
     width: 300px;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     margin-right: 20px;
     border-radius: 5px;
 }
 
 .blog-content {
+    flex: 1;
     text-align: left;
 }
 
@@ -858,25 +950,22 @@ table tr:nth-child(even) {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 100%; 
-        max-width: 100%; 
-        margin: 0 auto; 
     }
 
     .blog-image, .featured-image {
-        width: 100%; 
+        width: 100%; /* Adjust image to full width */
         height: auto;
-        margin-bottom: 20px;
-    }
-
-    .featured-content {
-        text-align: center;
-        width: 100%; 
+        margin-bottom: 15px;
     }
 
     .blog-content {
         text-align: center;
-        width: 100%; 
+        width: 100%;
+    }
+
+    /* Override reverse class on smaller screens */
+    .blog-post.reverse {
+        flex-direction: column;
     }
 
     /* Interactive Quiz (Blog Page) */
@@ -890,7 +979,23 @@ table tr:nth-child(even) {
     }
 }
 
+/* Last Minute Changes */
 footer p {
     color: white;
     text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent horizontal scrolling on mobile */
+body, html {
+    overflow-x: hidden;
+}
+
+.container, .main-content, .wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
 }
