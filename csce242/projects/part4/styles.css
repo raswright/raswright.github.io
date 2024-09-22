@@ -106,7 +106,7 @@ nav ul li a:hover {
     flex: 1;
     padding: 15px;
     font-size: 1.2em;
-    background-color: white;
+    background-color: var(--schedule-bg2);
     border-radius: 5px;
     box-shadow: 0 2px 5px var(--carousel-overlay-color)
     margin 0 10px;
@@ -193,7 +193,7 @@ body {
     text-align: center;
     padding: 40px;
     background-color: var(--schedule-bg2);
-    color: #fff;
+    color: var(--text-color);
 }
 
 .call-to-action h2 {
@@ -203,10 +203,10 @@ body {
 
 .call-to-action p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-.cta-button {
+.cta-button3 {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 10px 20px;
@@ -215,8 +215,8 @@ body {
     font-weight: bold;
 }
 
-.cta-button:hover {
-    background-color: var(--accent-color);
+.cta-button3:hover {
+    background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
@@ -379,6 +379,16 @@ body {
     z-index: 1; /* Ensure the title is always on top */
     display: block; /* Ensure the title remains visible during hover */
 }
+
+/* Individual Section Colors (Services Page) */
+.fitness { background-color: var(--schedule-bg1); }
+.wellness { background-color: var(--schedule-bg2); }
+.nutrition { background-color: var(--schedule-bg1); }
+.personal-training { background-color: var(--schedule-bg2); }
+.group-classes { background-color: var(--schedule-bg2); }
+.meditation { background-color: var(--schedule-bg1); }
+.mental-health { background-color: var(--schedule-bg2); }
+.outdoor { background-color: var(--schedule-bg1); }
 
 
 /* Responsive Design */
