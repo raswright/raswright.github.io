@@ -169,10 +169,16 @@ body {
 
 .left-image {
     justify-content: flex-start; 
+    width: 300px; /* Consistent width */
+    height: 410px; /* Consistent height */
+    object-fit: cover; /* Ensures images are resized to cover the container while maintaining aspect ratio */
 }
 
 .right-image {
     justify-content: flex-end; 
+    width: 300px; /* Consistent width */
+    height: 400px; /* Consistent height */
+    object-fit: cover; /* Ensures images are resized to cover the container while maintaining aspect ratio */
 }
 
 /* Responsive Design (Home Page) */
@@ -404,10 +410,8 @@ body {
 
 /* Hover state */
 .service-item.mental-health:hover img {
-    margin-top: -20px; /* Add extra space below the image */
+    margin-top: -15px; /* Add extra space below the image */
 }
-
-
 
 
 /* Responsive Design */
