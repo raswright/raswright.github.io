@@ -16,6 +16,7 @@
     ----hero-overlay-color: rgba(44, 62, 80, 0.7); 
     --carousel-overlay-color: rgba(0, 0, 0, 0.1); 
     --midgray: var(--light-gray)
+    --
 }
 
 /* Header Styling (Home Page) */
@@ -485,7 +486,7 @@ body {
 .submit-button {
     padding: 15px 20px;
     background-color: var(--schedule-bg2);
-    color: white;
+    color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -552,12 +553,12 @@ table tr {
 
 table th, table td {
     padding: 10px;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--carousel-overlay-color);
 }
 
 table th {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--primary-color);
+    color: #fff;
     font-size: 16px;
     text-transform: uppercase;
 }
@@ -566,8 +567,19 @@ table tr:nth-child(even) {
     background-color: lightgray;
 }
 
+
+.book-btn1 {
+    background-color: var(--schedule-bg2);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 .book-btn {
-    background-color: var(--primary-color);
+    background-color: var(--schedule-bg1);
     color: white;
     padding: 8px 15px;
     border: none;
@@ -588,9 +600,14 @@ table tr:nth-child(even) {
     content: " X "; 
 }
 
-.book-btn:hover {
-    background-color: var(--accent-color);
+.book-btn1:hover {
+    background-color: var(--primary-color);
 }
+
+.book-btn:hover {
+    background-color: var(--primary-color);
+}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
