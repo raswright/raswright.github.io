@@ -16,7 +16,6 @@
     ----hero-overlay-color: rgba(44, 62, 80, 0.7); 
     --carousel-overlay-color: rgba(0, 0, 0, 0.1); 
     --midgray: var(--light-gray)
-    --
 }
 
 /* Header Styling (Home Page) */
@@ -169,16 +168,16 @@ body {
 
 .left-image {
     justify-content: flex-start; 
-    width: 300px; /* Consistent width */
-    height: 410px; /* Consistent height */
-    object-fit: cover; /* Ensures images are resized to cover the container while maintaining aspect ratio */
+    width: 300px;
+    height: 400px; 
+    object-fit: cover; 
 }
 
 .right-image {
     justify-content: flex-end; 
-    width: 300px; /* Consistent width */
-    height: 400px; /* Consistent height */
-    object-fit: cover; /* Ensures images are resized to cover the container while maintaining aspect ratio */
+    width: 300px; 
+    height: 400px; 
+    object-fit: cover; 
 }
 
 /* Responsive Design (Home Page) */
@@ -288,18 +287,18 @@ body {
 /* Services Section Styling */
 .services-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min width to 300px */
-    gap: 50px; /* Keep the gap between items */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 50px; 
     padding: 20px;
-    max-width: 1400px; /* Expanded max width for larger screens */
-    margin: 0 auto; /* Center the grid */
+    max-width: 1400px; 
+    margin: 0 auto; 
 }
 
 .service-item {
     position: relative;
-    padding: 30px; /* Increased padding for more spacing */
-    width: 90%; /* Allow full width inside the grid */
-    height: 250px; /* Increased height for more space */
+    padding: 30px; 
+    width: 90%;
+    height: 250px; 
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -308,25 +307,19 @@ body {
     cursor: pointer;
 }
 
-/* Title and image default state */
-.service-item:hover h3 {
-    display: none; /* This will hide the title when hovering */
-}
-
-/* Alternatively, reposition the title to avoid overlap */
+/* repositioning of the title */
 .service-item:hover h3 {
     position: absolute;
-    top: -60px; /* Move it to the top */
-    left: 50%; /* Center the title */
+    top: -60px; 
+    left: 50%; 
     transform: translateX(-50%);
     font-size: 1.5rem;
-    color: #333; /* Ensure readability */
+    color: #333; 
     z-index: 10;
     display: block;
 }
 
-
-/* Hidden content (hover state) */
+/* Hidden content (hovering) */
 .service-item .more-info {
     padding-top: 50px;
     display: none;
@@ -347,18 +340,15 @@ body {
     box-sizing: border-box;
 }
 
-/* Ensure text wraps and fits inside the container */
 .service-item img.service-icon {
     display: block;
-    margin: 0 auto; /* Centers the image horizontally */
-    width: 100%; /* Ensures it takes up the container width */
-    max-width: 250px; /* Sets a maximum width to keep it well-contained */
-    height: auto; /* Maintains aspect ratio */
+    margin: 0 auto; 
+    width: 100%; 
+    max-width: 250px; 
+    height: auto; 
 }
 
-
-
-/* Hover Effect */
+/* hover effect */
 .service-item:hover .more-info {
     display: flex;
     opacity: 1;
@@ -369,7 +359,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Hover image in more-info */
 .service-item .more-info img {
     width: 90%;
     height: auto;
@@ -378,7 +367,6 @@ body {
     border-radius: 8px;
 }
 
-/* Adjusting text positioning */
 .service-item:hover h3 {
     color: #333;
     font-size: 1.7rem;
@@ -386,8 +374,25 @@ body {
     margin-bottom: 10px;
 }
 
+.service-item.mental-health:hover h3 {
+    font-size: 1.8rem; 
+    margin-bottom: 15px; 
+}
 
-    /*Individual Section Colors */
+.service-item.mental-health:hover img {
+    margin-top: -15px; 
+}
+
+.service-iten.outdoor:hover h3 {
+    font-size: 1.8rem; 
+    margin-bottom: 15px; /
+}
+
+.service-item.outdoor:hover img {
+    margin-top: -15px; 
+}
+
+/*Individual Colors */
 .fitness { background-color: var(--schedule-bg1); }
 .wellness { background-color: var(--schedule-bg2); }
 .nutrition { background-color: var(--schedule-bg1); }
@@ -397,27 +402,10 @@ body {
 .mental-health { background-color: var(--schedule-bg2); }
 .outdoor { background-color: var(--schedule-bg1); }
 
-
-/* Default state (before hover) */
-
-
-/* Hover state */
-.service-item.mental-health:hover h3 {
-    font-size: 1.8rem; /* Increase the font size only when hovered */
-    margin-bottom: 15px; /* Add extra space when hovered */
-}
-
-
-/* Hover state */
-.service-item.mental-health:hover img {
-    margin-top: -15px; /* Add extra space below the image */
-}
-
-
-/* Responsive Design */
+/* Responsive Design (Services Page) */
 @media (max-width: 768px) {
     .services-section {
-        grid-template-columns: 1fr 1fr; /* 2 columns on medium screens */
+        grid-template-columns: 1fr 1fr; 
     }
 
     .service-item {
@@ -428,11 +416,9 @@ body {
 
 @media (max-width: 480px) {
     .services-section {
-        grid-template-columns: 1fr; /* 1 column on small screens */
+        grid-template-columns: 1fr; 
     }
 }
-
-
 
 /* Our Mission (About Us Page) */ 
 .mission-section {
@@ -579,7 +565,6 @@ footer {
     }
 }
 
-
 /* Tables Styling (Schedule Page)*/
 table {
     width: 100%;
@@ -651,20 +636,6 @@ table tr:nth-child(even) {
     background-color: var(--primary-color);
 }
 
-
-/* Responsive design */
-@media (max-width: 768px) {
-    table th, table td {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    .book-btn {
-        padding: 6px 10px;
-        font-size: 12px;
-    }
-}
-
 /* Individual Class Sections (Schedule Page) */
 .class-section {
     margin: 20px 0;
@@ -693,6 +664,19 @@ table tr:nth-child(even) {
 }
 .bodypump {
     background-color: var(--schedule-bg1); 
+}
+
+/* Responsive design (Schedule Page) */
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .book-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
 }
 
 /* Blog Stylings (Blog Page) */
