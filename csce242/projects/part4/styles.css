@@ -392,9 +392,6 @@ body {
 .outdoor { background-color: var(--schedule-bg1); }
 
 
-
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .services-section {
