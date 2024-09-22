@@ -368,7 +368,7 @@ body {
     color: #333; /* Make the title text darker for readability on white background */
     font-size: 1.7rem;
     position: absolute;
-    transform: translateX(-50%);
+    transform: translateX(25%);
     top: -20px; /* Slightly move the title upwards to give more space */
     z-index: 1; /* Ensure the title is always on top */
     display: block; /* Ensure the title remains visible during hover */
@@ -434,7 +434,7 @@ body {
 }
 
 .founding-section h2 {
-    color: var(--accent-color);
+    color: var(--schedule-bg2);
 }
 
 /* Social Media Section (About Us Page) */
@@ -483,7 +483,7 @@ body {
 
 .submit-button {
     padding: 15px 20px;
-    background-color: var(--accent-color);
+    background-color: var(--schedule-bg2);
     color: white;
     border: none;
     cursor: pointer;
@@ -492,7 +492,7 @@ body {
 }
 
 .submit-button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
 }
 
 /* Footer Styling (About Us Page) */
