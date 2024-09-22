@@ -392,6 +392,24 @@ body {
 .outdoor { background-color: var(--schedule-bg1); }
 
 
+/* Default state (before hover) */
+
+
+/* Hover state */
+.service-item.mental-health:hover h3 {
+    font-size: 1.8rem; /* Increase the font size only when hovered */
+    margin-bottom: 15px; /* Add extra space when hovered */
+}
+
+
+/* Hover state */
+.service-item.mental-health:hover img {
+    margin-top: -20px; /* Add extra space below the image */
+}
+
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .services-section {
