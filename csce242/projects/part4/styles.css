@@ -304,26 +304,26 @@ body {
 
 /* Title and image default state */
 .service-item:hover h3 {
+    display: none; /* This will hide the title when hovering */
+}
+
+/* Alternatively, reposition the title to avoid overlap */
+.service-item:hover h3 {
     position: absolute;
-    top: -20px; /* Move it up to avoid overlapping */
-    left: 50%; /* Center horizontally */
+    top: -60px; /* Move it to the top */
+    left: 50%; /* Center the title */
     transform: translateX(-50%);
     font-size: 1.5rem;
-    color: white; /* Make the color readable */
-    z-index: 10; /* Ensure it stays on top */
-}
-
-
-.service-item img.service-icon {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 10px auto;
+    color: #333; /* Ensure readability */
+    z-index: 10;
     display: block;
-    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+
 
 /* Hidden content (hover state) */
 .service-item .more-info {
+    padding-top: 50px;
     display: none;
     padding: 10px;
     color: white;
