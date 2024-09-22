@@ -15,6 +15,7 @@
     --schedule-bg2: #68939a;
     ----hero-overlay-color: rgba(44, 62, 80, 0.7); 
     --carousel-overlay-color: rgba(0, 0, 0, 0.1); 
+    --midgray: var(--light-gray)
 }
 
 /* Header Styling (Home Page) */
@@ -652,7 +653,7 @@ table tr:nth-child(even) {
 .featured-post {
     display: flex;
     align-items: center;
-    background-color: lightgray;
+    background-color: var(--midgray);
     padding: 20px;
     margin-bottom: 40px;
     box-shadow: 0 2px 10px --carousel-overlay-color;
@@ -681,7 +682,7 @@ table tr:nth-child(even) {
 }
 
 .featured-content .read-more {
-    background-color: var(--accent-color);
+    background-color: var(--schedule-bg2);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -689,7 +690,7 @@ table tr:nth-child(even) {
 }
 
 .featured-content .read-more:hover {
-    background-color: var(--accent-color)
+    background-color: var(--primary-color)
 }
 
 /* Blog Stylings Addition (Blog Page) */
@@ -734,15 +735,15 @@ table tr:nth-child(even) {
 }
 
 .blog-tags span {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--schedule-bg2);
+    color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 10px;
 }
 
 .read-more {
-    color: var(--accent-color);
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -760,8 +761,8 @@ table tr:nth-child(even) {
 }
 
 .load-more button {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--schedule-bg2);
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
@@ -769,17 +770,17 @@ table tr:nth-child(even) {
 }
 
 .load-more button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
 }
 
 /* Interactive Quiz (Blog Page) */
 .interactive-quiz {
-    background-color: var(--accent-color);
+    background-color: var(--schedule-bg1);
     padding: 30px;
     text-align: center;
     border-radius: 8px;
     margin-top: 40px;
-    box-shadow: 0px 4px 6px var(--carousel-overlay-color)
+    box-shadow: 0px 4px 6px var(--primary-color)
 }
 
 .interactive-quiz h2 {
@@ -796,8 +797,8 @@ table tr:nth-child(even) {
 .interactive-quiz button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--schedule-bg2);
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
