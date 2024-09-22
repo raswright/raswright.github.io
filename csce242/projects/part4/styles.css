@@ -344,7 +344,7 @@ body {
 
 /* Ensure text wraps and fits inside the container */
 .service-item .more-info p {
-    font-size: 1.0rem; /* Increased text size */
+    font-size: 1.5rem; /* Increased text size */
     color: #333;
     text-align: center;
     margin-bottom: 10px;
