@@ -354,9 +354,12 @@ body {
 
 .service-item img.service-icon {
     display: block;
-    margin: 0 auto; 
-    height: auto; 
+    margin: 0 auto;  /* Centers the image horizontally */
+    max-width: 350px; /* Maximum width for the image */
+    width: 300%;      /* Ensures it fills the container width */
+    height: auto;     /* Maintains aspect ratio */
 }
+
 
 
 /* Hover Effect */
