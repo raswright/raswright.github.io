@@ -293,7 +293,7 @@ body {
     position: relative;
     padding: 30px; /* Increased padding for more spacing */
     width: 90%; /* Allow full width inside the grid */
-    height: 350px; /* Increased height for more space */
+    height: 250px; /* Increased height for more space */
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
