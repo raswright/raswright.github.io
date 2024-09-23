@@ -230,6 +230,14 @@ body {
 
 }
 
+.left-image img,
+.right-image img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    max-width: 400px; 
+}
+
 /* Responsive Design (Home Page) */
 @media (max-width: 768px) {
     .why-choose-us-container {
