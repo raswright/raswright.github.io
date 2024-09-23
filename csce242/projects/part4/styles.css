@@ -230,19 +230,7 @@ body {
 
 }
 
-.left-image {
-    justify-content: flex-start; 
-    width: 300px;
-    height: 400px; 
-    object-fit: cover; 
-}
 
-.right-image {
-    justify-content: flex-end; 
-    width: 300px; 
-    height: 400px; 
-    object-fit: cover; 
-}
 
 /* Responsive Design (Home Page) */
 @media (max-width: 768px) {
@@ -257,17 +245,14 @@ body {
     }
 
     .whoweare-images {
-        flex-direction: column; /* Stack images vertically on smaller screens */
+        flex-direction: column; 
     }
 
     .whoweare-image {
         width: 90%;
-        margin: 0 auto; /* Center the image */
+        margin: 0 auto; 
     }
-
-    
 }
-
 
 /* Call-to-Action Section (Home Page) */
 .call-to-action {
@@ -361,11 +346,11 @@ body {
         padding: 8px 15px; 
     }
     .hero {
-        height: 300px; /* Adjust the height for smaller screens */
+        height: 300px; 
     }
 }
 
-/* Services Section Styling */
+/* Services Styles (Services Page) */
 .services-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
@@ -388,25 +373,23 @@ body {
     cursor: pointer;
 }
 
-/* repositioning of the title */
 .service-item:hover h3 {
     position: absolute;
     top: -60px; 
     left: 50%; 
     transform: translateX(-50%);
     font-size: 1.5rem;
-    color: #333; 
+    color: var(--text-color); 
     z-index: 10;
     display: block;
 }
 
-/* Hidden content (hovering) */
 .service-item .more-info {
     padding-top: 50px;
     display: none;
     padding: 10px;
     color:var(--text-color);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--secondary-color);
     position: absolute;
     top: 0;
     left: 0;
@@ -429,7 +412,7 @@ body {
     height: auto; 
 }
 
-/* hover effect */
+/* Hover effect (Services Page)  */
 .service-item:hover .more-info {
     display: flex;
     opacity: 1;
@@ -449,7 +432,7 @@ body {
 }
 
 .service-item:hover h3 {
-    color: #333;
+    color: var(--text-color);
     font-size: 1.7rem;
     position: relative;
     margin-bottom: 10px;
@@ -473,7 +456,7 @@ body {
     margin-top: -15px; 
 }
 
-/*Individual Colors */
+/*Individual Colors (Services Page) */
 .fitness { background-color: var(--schedule-bg1); }
 .wellness { background-color: var(--schedule-bg2); }
 .nutrition { background-color: var(--schedule-bg1); }
@@ -517,7 +500,7 @@ body {
     font-size: 1.2rem;
 }
 
-/* Our Mission Images Section (About Us Page) */
+/* Our Mission Images (About Us Page) */
 .mission-images {
     display: flex;
     justify-content: space-evenly;
@@ -599,7 +582,7 @@ body {
 .submit-button {
     padding: 15px 20px;
     background-color: var(--schedule-bg2);
-    color: #fff;
+    color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -649,7 +632,7 @@ footer {
     }
 
     .contact-form {
-        width: 90%; /* Shrink form width on smaller screens */
+        width: 90%; 
         margin: 0 auto;
     }
 }
@@ -675,7 +658,7 @@ table th, table td {
 
 table th {
     background-color: var(--primary-color);
-    color: #fff;
+    color: white;
     font-size: 16px;
     text-transform: uppercase;
 }
@@ -872,7 +855,7 @@ table tr:nth-child(even) {
 
 .blog-tags span {
     background-color: var(--schedule-bg2);
-    color: #fff;
+    color: white;
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 10px;
@@ -934,7 +917,7 @@ table tr:nth-child(even) {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: var(--schedule-bg2);
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -953,7 +936,7 @@ table tr:nth-child(even) {
     }
 
     .blog-image, .featured-image {
-        width: 100%; /* Adjust image to full width */
+        width: 100%; 
         height: auto;
         margin-bottom: 15px;
     }
@@ -963,7 +946,6 @@ table tr:nth-child(even) {
         width: 100%;
     }
 
-    /* Override reverse class on smaller screens */
     .blog-post.reverse {
         flex-direction: column;
     }
@@ -979,7 +961,16 @@ table tr:nth-child(even) {
     }
 }
 
-/* Last Minute Changes */
+/* Stops horizontal scrolling */
+body, html {
+    overflow-x: hidden;
+}
+
+.container, .main-content, .wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 footer p {
     color: white;
     text-align: center;
@@ -988,14 +979,4 @@ footer p {
 img {
     max-width: 100%;
     height: auto;
-}
-
-/* Prevent horizontal scrolling on mobile */
-body, html {
-    overflow-x: hidden;
-}
-
-.container, .main-content, .wrapper {
-    max-width: 100%;
-    overflow-x: hidden;
 }
