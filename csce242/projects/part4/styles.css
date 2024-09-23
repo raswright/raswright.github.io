@@ -230,8 +230,6 @@ body {
 
 }
 
-
-
 /* Responsive Design (Home Page) */
 @media (max-width: 768px) {
     .why-choose-us-container {
@@ -881,7 +879,7 @@ table tr:nth-child(even) {
 
 .load-more button {
     background-color: var(--schedule-bg2);
-    color: #fff;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
