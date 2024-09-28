@@ -1,23 +1,31 @@
-// Make sure the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
-    const descriptions = [
-        { title: "Rain", description: "I think it's time to bring your umbrella!" },
-        { title: "Read", description: "Got to stay studious!" },
-        { title: "Shovel", description: "Time for some outdoor activities!" },
-        { title: "Work", description: "Let’s get some work done!" },
-        { title: "Birthday", description: "This is a photo of me on my birthday!!!" },
-        { title: "Clown", description: "Here I am dressed as a clown!" }
+    const imagesArray = [
+        { src: "/csce242/assignments/08_Arrays/images/rain.jpg", title: "Rain", description: "Time to bring your umbrella!" },
+        { src: "/csce242/assignments/08_Arrays/images/read.jpg", title: "Read", description: "Stay studious with a good book!" },
+        // Add more images here
     ];
 
-    // Select all image containers and add event listeners
-    document.querySelectorAll('.image-container img').forEach((img, index) => {
-        img.addEventListener('click', () => {
-            const title = descriptions[index].title;
-            const description = descriptions[index].description;
+    const imageGrid = document.querySelector('.image-grid');
+    const titleElement = document.getElementById('image-title');
+    const descriptionElement = document.getElementById('image-description');
 
-            // Update title and description
-            document.getElementById('image-title').textContent = title;
-            document.getElementById('image-description').textContent = description;
+    // Loop through the array and display the images
+    imagesArray.forEach((image) => {
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('image-container');
+
+        const img = document.createElement('img');
+        img.src = image.src;
+        img.alt = image.title;
+        img.setAttribute('data-title', image.title);
+        img.setAttribute('data-description', image.description);
+
+        img.addEventListener('click', () => {
+            titleElement.textContent = image.title;
+            descriptionElement.textContent = image.description;
         });
+
+        imageContainer.appendChild(img);
+        imageGrid.appendChild(imageContainer);
     });
 });
