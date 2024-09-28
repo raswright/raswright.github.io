@@ -1,31 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const imagesArray = [
-        { src: "/csce242/assignments/08_Arrays/images/rain.jpg", title: "Rain", description: "Time to bring your umbrella!" },
-        { src: "/csce242/assignments/08_Arrays/images/read.jpg", title: "Read", description: "Stay studious with a good book!" },
-        // Add more images here
-    ];
+    const descriptions = {
+        "rain": { title: "Rain", description: "I think it's time to bring your umbrella!" },
+        "read": { title: "Read", description: "Got to stay studious!" },
+        "shovel": { title: "Shovel", description: "Time for some outdoor activities!" },
+        "work": { title: "Work", description: "Let’s get some work done!" },
+        "birthday": { title: "Birthday", description: "This is a photo of me on my birthday!!!" },
+        "clown": { title: "Clown", description: "Here I am dressed as a clown!" }
+    };
 
-    const imageGrid = document.querySelector('.image-grid');
-    const titleElement = document.getElementById('image-title');
-    const descriptionElement = document.getElementById('image-description');
+    document.querySelectorAll('.image-container img').forEach((img) => {
+        img.addEventListener('click', function () {
+            const imgAlt = this.alt; // Get the alt text as a key
+            const title = descriptions[imgAlt].title;
+            const description = descriptions[imgAlt].description;
 
-    // Loop through the array and display the images
-    imagesArray.forEach((image) => {
-        const imageContainer = document.createElement('div');
-        imageContainer.classList.add('image-container');
-
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = image.title;
-        img.setAttribute('data-title', image.title);
-        img.setAttribute('data-description', image.description);
-
-        img.addEventListener('click', () => {
-            titleElement.textContent = image.title;
-            descriptionElement.textContent = image.description;
+            // Update the text content
+            document.getElementById('image-title').textContent = title;
+            document.getElementById('image-description').textContent = description;
         });
-
-        imageContainer.appendChild(img);
-        imageGrid.appendChild(imageContainer);
     });
 });
