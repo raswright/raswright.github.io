@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.bird-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bird-card {
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.bird-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bird-card:hover {
+    transform: scale(1.05);
+}
