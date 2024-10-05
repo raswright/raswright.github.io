@@ -1,35 +1,53 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #352746;
+    color: black;
     text-align: center;
     margin: 0;
 }
 
 h1, h2 {
-    color: #333;
+    color: #fff;
 }
 
+/* Container for bird cards / styling */
 .bird-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 90px;
+    margin-top: 50px;
 }
 
 .bird-card {
-    width: 200px;
+    background-color: #377aa7; 
+    color: white;
+    width: 250px;
+    height: 280px;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 8px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
+/* Image styling */
 .bird-card img {
-    width: 100%;
+    width: 200px;
     height: 200px;
     object-fit: cover;
+    border-radius: 5px;
 }
-
+/* Hover effect for bird cards */
 .bird-card:hover {
     transform: scale(1.05);
+}
+/* Footer styling */
+footer {
+    padding: 100px;
+    color: white
 }

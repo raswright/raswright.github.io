@@ -1,4 +1,4 @@
-// bird class to hold bird info
+// Bird class to hold bird info
 class Bird {
     constructor(name, size, lifespan, food, habitat, fact, image) {
         this.name = name;
@@ -10,7 +10,7 @@ class Bird {
         this.image = image;
     }
 
-    // method to return HTML with bird name and image
+    // Return HTML with bird name and image
     getSection() {
         return `
             <div class="bird-card w3-card" onclick="showBird('${this.name}')">
@@ -20,7 +20,7 @@ class Bird {
         `;
     }
 
-    // method to return full details for the modal
+    // Return full details for the modal
     getExpandedSection() {
         return `
             <p><strong>Size:</strong> ${this.size}</p>
@@ -32,15 +32,15 @@ class Bird {
     }
 }
 
-    // array of bird objects with the details
+    // Array of bird objects with details
 const birds = [
-    new Bird('Hummingbird', '2.5 inches', '3-5 years', 'Nectar', 'Trees', 'Nicknamed "Hummers"', 'images/hummingbird.jpg'),
-    new Bird('Blue Jay', '9-12 inches', '7 years', 'Seeds, nuts', 'Forests', 'Mimics hawks', 'images/bluejay.jpg'),
-    new Bird('Cardinal', '8-9 inches', '3 years', 'Insects, fruits', 'Woodlands', 'Known for its bright red color', 'images/cardinal.jpg'),
-    new Bird('Robin', '9-11 inches', '2 years', 'Worms', 'Gardens', 'Famous for their melodic songs', 'images/robin.jpg')
-];
-
-    // function to add bird info to page
+        new Bird('Peregrine Falcon', '15-20 inches', '10-15 years', 'Small birds', 'Cliffs, urban areas', 'Fastest animal in the world', 'images/falcon.jpg'),
+        new Bird('Bald Eagle', '28-40 inches', '20-30 years', 'Fish', 'Near large bodies of water', 'National bird of the USA', 'images/eagle.jpg'),
+        new Bird('Peacock', '35-50 inches', '15-20 years', 'Seeds, insects', 'Forests', 'Known for their beautiful feathers', 'images/peacock.jpg'),
+        new Bird('Flamingo', '39-59 inches', '20-30 years', 'Algae, crustaceans', 'Lakes, lagoons', 'Known for their pink color', 'images/flamingo.jpg')
+    ];
+    
+    // Function adding bird info to page
 function loadBirds() {
     const container = document.getElementById('bird-container');
     birds.forEach(bird => {
@@ -48,7 +48,7 @@ function loadBirds() {
     });
 }
 
-    // when a bird is clicked, show detailed info in modal
+    // When a bird is clicked, show detailed info in modal
 function showBird(name) {
     const bird = birds.find(b => b.name === name);
     document.getElementById('modalTitle').textContent = bird.name;
@@ -56,5 +56,5 @@ function showBird(name) {
     document.getElementById('birdModal').style.display = 'block';
 }
 
-    // koads bird cards when page is set
+    // Loads bird cards when page is set
 document.addEventListener('DOMContentLoaded', loadBirds);
