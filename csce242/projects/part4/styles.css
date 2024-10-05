@@ -52,17 +52,31 @@ nav ul li a:hover {
     color:  var(--button-hover-color);
 }
 
+/* Main Navigation Styling */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+}
+
+.nav-links li {
+    margin: 0;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 1.2rem;
+    padding: 10px 15px;
+}
+
+.nav-links li a:hover {
+    background-color: var(--button-hover-color);
+    border-radius: 5px;
 }
 
 /* Hamburger Styling (Home Page) */
@@ -96,11 +110,13 @@ nav ul li a:hover {
         text-align: center;
     }
 
-    .hamburger-menu {
-        display: flex;
+    .nav-links li a {
+        padding: 10px;
+        font-size: 1.5rem;
     }
+}
 
-    #menu-toggle:checked + .hamburger-menu + .nav-links {
+    #menu-toggle:checked  + .nav-links {
         display: flex;
     }
 
@@ -112,7 +128,6 @@ nav ul li a:hover {
         font-size: 1.5rem;
         color: var(--secondary-color);
     }
-}
 
 /* Who we Are Section (Home Page) */
 .whoweare {
@@ -484,49 +499,92 @@ body {
 /* Our Mission (About Us Page) */ 
 .mission-section {
     text-align: center;
-    padding: 10px;
+    padding: 40px 20px;
     margin: 20px 0;
 }
 
 .mission-section h2 {
+    text-align: center;
     font-size: 2.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .mission-section p {
     font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto; 
+    line-height: 1.6; 
 }
 
 /* Our Mission Images (About Us Page) */
 .mission-images {
     display: flex;
-    justify-content: space-evenly;
-    margin: 30px 0;
+    justify-content: space-around;
+    align-items: center;
+    gap: 950px;
+    margin-top: 30px;
+}
+
+.mission-section {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+    word-wrap: break-word;
 }
 
 .mission-image {
-    width: 300px;
-    height: 200px;
+    margin-top: -270px;
+    width: 200px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 10px var(--carousel-overlay-color);
 }
 
 /* Founding Story Styling (About Us Page) */
 .mission-section.founding-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--primary-color);
     padding: 30px;
-    border: 2px dashed var(--primary-color); 
     margin-bottom: 40px;
-    font-style: italic; 
 }
 
-.founding-section p {
-    font-size: 1.2rem;
-    color: #fff; 
+h1 { 
+    text-align: center;
+    margin-bottom: -70px;
+    color:white
 }
 
-.founding-section h2 {
-    color: var(--schedule-bg2);
+.founding-section .text-left,
+.founding-section .text-right {
+    flex: 1;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.founding-section .text-left { 
+    margin-bottom: -20px;
+}
+
+.founding-section .text-right {
+    margin-bottom: -20px;
+}
+
+.founding-section .founding-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.founding-section .founding-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Social Media Section (About Us Page) */
@@ -549,13 +607,28 @@ body {
 }
 
 /* Contact Section (About Us Page) */
+
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
 }
+
+.contact-section {
+    text-align: center; 
+    margin: 0 auto; 
+    margin-right: -10px;
+}
+
+.contact-section p {
+    margin: 0 auto; 
+    margin-right: -20px;
+}
+
+
 
 .contact-form label {
     font-size: 1.5rem;
@@ -577,6 +650,7 @@ body {
 }
 
 .submit-button {
+    margin-left: 65px;
     padding: 15px 20px;
     background-color: var(--schedule-bg2);
     color: white;
@@ -631,6 +705,49 @@ footer {
     .contact-form {
         width: 90%; 
         margin: 0 auto;
+    }
+}
+
+/* Responsive Design - Mission/Founding Story (Abour us Page) */
+@media (max-width: 768px) {
+    .mission-images {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+        margin-top: 20px; 
+    }
+
+    .mission-image {
+        margin-top: 0px; 
+        width: 150px; 
+        height: auto;
+    }
+
+    .mission-section p {
+        max-width: 90%; 
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-section.founding-section {
+        flex-direction: column;
+    }
+
+    .founding-section .text-left,
+    .founding-section .text-right,
+    .founding-section .founding-image {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .founding-section .founding-image img {
+        max-width: 80%; 
+    }
+
+    .founding-section .text-left,
+    .founding-section .text-right {
+        text-align: left; 
     }
 }
 
