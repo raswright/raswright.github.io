@@ -540,8 +540,6 @@ body {
 
 .mission-image {
     margin-top: -270px;
-    width: 200px;
-    height: 200px;
     border-radius: 10px;
     box-shadow: 0 5px 10px var(--carousel-overlay-color);
 }
