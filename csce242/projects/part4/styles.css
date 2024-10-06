@@ -274,6 +274,12 @@ body {
     color: var(--text-color);
 }
 
+.white-spacer {
+    background-color: white; 
+    height: 40px; 
+    width: 100%; 
+}
+
 .call-to-action h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
@@ -313,12 +319,10 @@ body {
     text-align: center;
 }
 
-
 .hero-content {
     padding: 30px;
     border-radius: 10px;
 }
-
 
 .hero h2 {
     font-size: 2.5rem;
@@ -628,8 +632,6 @@ h1 {
     margin-right: -20px;
 }
 
-
-
 .contact-form label {
     font-size: 1.5rem;
 }
@@ -664,7 +666,7 @@ h1 {
     background-color: var(--primary-color);
 }
 
-/* Footer Styling (About Us Page) */
+/* Footer Styling */
 footer {
     background-color: var(--primary-color);
     color: var(--secondary-color)
@@ -673,7 +675,7 @@ footer {
     margin-top: 40px;
 }
 
-/* Responsive Design (About Us Page) */
+/* Responsive Design (About Us Page)  */
 @media (max-width: 768px) {
     nav ul li {
         display: block;
@@ -702,13 +704,32 @@ footer {
         margin-bottom: 10px;
     }
 
+    .contact-section {
+        padding: 20px;
+    }
+
     .contact-form {
-        width: 90%; 
-        margin: 0 auto;
+        max-width: 100%; 
+    }
+
+    .contact-form label {
+        font-size: 1rem;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+        padding: 10px;
     }
 }
 
-/* Responsive Design - Mission/Founding Story (Abour us Page) */
+/* Responsive Design - Mission/Founding Story (About us Page) */
 @media (max-width: 768px) {
     .mission-images {
         flex-direction: column; 
@@ -727,9 +748,7 @@ footer {
         max-width: 90%; 
         margin: 0 auto;
     }
-}
 
-@media (max-width: 768px) {
     .mission-section.founding-section {
         flex-direction: column;
     }
