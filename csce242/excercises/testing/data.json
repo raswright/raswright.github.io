@@ -1,0 +1,19 @@
+[
+    {
+      "_id": 1,
+      "name": "Yoga",
+      "instructor": "Coco Rodriguez",
+      "time": "Monday, 8:00 AM - 9:00 AM",
+      "img_name": "yoga.jpg",
+      "details": ["Relaxing", "Good for Flexibility", "Low Intensity"]
+    },
+    {
+      "_id": 2,
+      "name": "Running",
+      "instructor": "Jaden Adams",
+      "time": "Tuesday, 5:00 PM - 7:00 PM",
+      "img_name": "running.jpg",
+      "details": ["Cardio", "High Intensity", "Good for Endurance"]
+    }
+  ]
+  

@@ -1,0 +1,122 @@
+<!-- RaSean Wright - CSCE 242 -->
+<!DOCTYPE html>
+<head>
+    <title>Blog - VitalFit & Wellness</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Wellness Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Featured Blog Post(s) -->
+        <section class="featured-post">
+            <img src="/csce242/projects/part4/images/blog1.jpg" width="500" height="400" alt="Featured Post" class="featured-image">
+            <div class="featured-content">
+                <h2>25 ways exercise can change your life</h2>
+                <p>If you are only exercising to lose weight, you may find it hard to stick to your goal. It can take a few weeks or months to see changes in your outward appearance; thankfully, there are numerous ways exercise improves your health from the inside out. Some exercise benefits are immediate, which can give you that extra push when you want to quit.</p>
+                <a href="https://www.piedmont.org/living-real-change/25-ways-exercise-can-change-your-life" class="read-more">Read Full Article</a>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog-section">
+            <h2>Latest Blog Posts</h2>
+
+            <!-- Blog Post 1 -->
+            <article class="blog-post">
+                <img src="/csce242/projects/part4/images/blog2.jpg" width="300" height="200" alt="Blog Post 1" class="blog-image">
+                <div class="blog-content">
+                    <h3>12 exercise benefits to encourage a workout routine</h3>
+                    <p>Physical activity is about more than just flexing your muscles. Strength training at the gym, a brisk walk around the neighborhood, or a high-intensity aerobic workout in your living room positively benefits the rest of your day. But even if you know that exercise is good for you, it's not always easy to prioritize activity in your regular routine. Working too much and taking care of family can get in the way. Whether you need an extra burst of encouragement to keep up your existing routine or a nudge to get you started, learning about the endless exercise benefits is a great motivator. Here are 12 benefits of regular exercise and how to start building a sustainable routine.</p>
+                    <div class="blog-tags">
+                        <span>Fitness</span>
+                        <span>Wellness</span>
+                    </div>
+                    <a href="https://www.betterup.com/blog/exercise-benefits" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post reverse">
+                <div class="blog-content">
+                    <h3>25 Simple Tips to Make Your Diet Healthier</h3>
+                    <p>You can eat healthier by making a few swaps, such as choosing whole grains over refined grains and eating more protein.A diet rich in fruits and vegetables has been scientifically proven to provide numerous health benefits, such as reducing your risk of several chronic diseases and strengthening your immune system. Making major changes to your diet can sometimes seem very overwhelming. It may be more manageable to start with just one thing — like eating more of your favorite fruit — rather than all of them at once. This article discusses 25 ways to make your usual diet slightly healthier over time.</p>
+                    <div class="blog-tags">
+                        <span>Nutrition</span>
+                    </div>
+                    <a href="https://www.healthline.com/nutrition/healthy-eating-tips" class="read-more">Read More</a>
+                </div>
+                <img src="/csce242/projects/part4/images/blogfood.jpg" width="300" height="200" alt="Blog Post 2" class="blog-image">
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-post">
+                <img src="/csce242/projects/part4/images/mentalhealth1.jpg" width="300" height="200" alt="Blog Post 3" class="blog-image">
+                <div class="blog-content">
+                    <h3>How to look after your mental health using exercise</h3>
+                    <p>There are many reasons why physical activity is good for your body - having a healthy heart and improving your joints and bones are just two, but did you know that physical activity is also beneficial for your mental health and well-being?As part of our work to promote better mental health, we have produced a pocket guide to show the positive effect physical activity can have on your mental well-being, including some tips and suggestions to help you get started. Being active doesn't just mean doing sports or going to the gym. There are many other ways to be active. Find the one that works for you, and let's all get physical.</p>
+                    <div class="blog-tags">
+                        <span>Mental Health</span>
+                    </div>
+                    <a href="https://www.mentalhealth.org.uk/explore-mental-health/publications/how-look-after-your-mental-health-using-exercise" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article class="blog-post reverse">
+                <div class="blog-content">
+                    <h3>Staying Hydrated, Staying Healthy</h3>
+                    <p>When the temperatures rise, getting enough water is important whether you;re playing sports, traveling, or just sitting in the sun. It's critical for your heart health Drinking enough water keeps the body hydrated, which helps the heart more easily pump blood through the body. It also helps muscles work efficiently. If you're well hydrated, your heart doesn't have to work as hard. Dehydration means your body doesn't have enough water, which can make you feel really thirsty and cause other problems such as dizziness, feeling tired, swollen feet, a headache or even life-threatening illnesses, such as heat stroke.</p>
+                    <div class="blog-tags">
+                        <span>Nutrition</span>
+                        <span>Fitness</span>
+                    </div>
+                    <a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/staying-hydrated-staying-healthy" class="read-more">Read More</a>
+                </div>
+                <img src="/csce242/projects/part4/images/drinking.jpg" width="300" height="200" alt="Blog Post 4" class="blog-image">
+            </article>
+        </section>
+
+        <!-- Load More Button -->
+        <div class="load-more">
+            <button>Load More</button>
+        </div>
+    </main>
+
+    <!-- Interactive Quiz Section (make function later) -->
+<section class="interactive-quiz">
+    <h2>What's Your Favorite Fitness Activity?</h2>
+    <form id="fitness-quiz">
+        <input type="radio" id="yoga" name="activity" value="yoga">
+        <label for="yoga">Yoga</label><br>
+        <input type="radio" id="running" name="activity" value="running">
+        <label for="running">Running</label><br>
+        <input type="radio" id="cycling" name="activity" value="cycling">
+        <label for="cycling">Cycling</label><br>
+        <input type="radio" id="strength" name="activity" value="strength">
+        <label for="strength">Strength Training</label><br>
+        <input type="radio" id="zumba" name="activity" value="zumba">
+        <label for="zumba">Zumba</label><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="quiz-result"></div>
+</section>
+
+
+    <footer>
+        <p>&copy; 2024 VitalFit & Wellness. All rights reserved.</p>
+    </footer>
+</body>
+</html>
