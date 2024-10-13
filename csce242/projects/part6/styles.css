@@ -838,6 +838,12 @@ table tr:nth-child(even) {
     color: white;
 }
 
+.class-details img {
+    width: 100px;  /* Set the width you prefer */
+    height: auto;  /* Automatically adjust height based on width */
+    object-fit: cover;  /* Optional: crops the image to fit the container */
+}
+
 
 .booked {
     color: var(--warning-color);

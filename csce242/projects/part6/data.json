@@ -18,7 +18,7 @@
         "availability": "10/15 slots available",
         "location": "Room A",
         "status": "Open",
-        "img_name": "yoga2-class.jpg",
+        "img_name": "yoga2.jpg",
         "extra_info": ["Wear comfortable clothes", "Bring your own mat", "Bring a water bottle"]
     },
     {
@@ -29,7 +29,7 @@
         "availability": "22/25 slots available",
         "location": "Room A",
         "status": "Open",
-        "img_name": "yoga3-class.jpg",
+        "img_name": "yoga3.jpg",
         "extra_info": ["Wear comfortable clothes", "Bring your own mat", "Bring a water bottle"]
     },
     {
@@ -40,7 +40,7 @@
         "availability": "18/25 slots available",
         "location": "Room A",
         "status": "Open",
-        "img_name": "yoga4-class.jpg",
+        "img_name": "yoga4.jpg",
         "extra_info": ["Wear comfortable clothes", "Bring your own mat", "Bring a water bottle"]
     },
     {
@@ -51,7 +51,7 @@
         "availability": "11/20 slots available",
         "location": "Room A",
         "status": "Open",
-        "img_name": "yoga5-class.jpg",
+        "img_name": "yoga5.jpg",
         "extra_info": ["Wear comfortable clothes", "Bring your own mat", "Bring a water bottle"]
     },
     {
