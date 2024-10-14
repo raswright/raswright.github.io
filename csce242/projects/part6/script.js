@@ -2,32 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            const classCounter = {
-                "Yoga": 0,
-                "Pilates": 0,
-                "Running": 0,
-                "Cycling": 0,
-                "Zumba": 0,
-                "Body Pump": 0
-            };
-
-            // **Preview Button Logic**
-            document.querySelectorAll('.preview-btn, .preview-btn1').forEach((button) => {
+            // preview button functionality
+            document.querySelectorAll('.preview-btn, .preview-btn1').forEach((button, index) => {
                 button.addEventListener('click', function() {
-                    const className = this.closest('section').querySelector('h2').innerText.trim();
-                    classCounter[className]++;
-
-                    const classInfo = data.filter(item => item.class_name === className)[classCounter[className] - 1];
+                    // get class info from JSON from button index
+                    const classInfo = data[index];
 
                     if (this.textContent === 'Unpreview') {
-                        // Unpreview logic: remove class details
+                        // removes class details if already previewed
                         const classDetails = this.parentElement.querySelector('.class-details');
                         if (classDetails) {
                             classDetails.remove();
                         }
                         this.textContent = 'Preview';
                     } else {
-                        // Preview logic: show class details
+                        // show class details
                         if (classInfo) {
                             const classDetails = `
                                 <div class="class-details">
@@ -37,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <p>Availability: ${classInfo.availability}</p>
                                     <p>Location: ${classInfo.location}</p>
                                     <p>Extra Info: ${classInfo.extra_info.join(', ')}</p>
-                                    <img src="images/${classInfo.img_name}" alt="${classInfo.class_name}">
+                                    <img src="images/${classInfo.img_name}" alt="${classInfo.class_name}" style="width:150px;height:auto;">
                                 </div>
                             `;
                             const classSection = document.createElement('div');
@@ -50,20 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
 
-            // **Book Now Button Logic**
-            document.querySelectorAll('.book-btn').forEach((button) => {
+            // Book Now button functionality
+            document.querySelectorAll('.book-btn').forEach((button, index) => {
                 button.addEventListener('click', function() {
-                    const className = this.closest('section').querySelector('h2').innerText.trim();
-                    classCounter[className]++;
-
-                    const classInfo = data.filter(item => item.class_name === className)[classCounter[className] - 1];
+                    // get class info from JSON from button index
+                    const classInfo = data[index];
 
                     if (this.textContent === 'Booked') {
-                        // Unbook logic: revert back to "Book Now"
+                        // revert back to "Book Now"
                         this.textContent = 'Book Now';
                         this.classList.remove('booked');
                     } else {
-                        // Book logic: mark as "Booked"
+                         // mark as "Booked"
                         if (classInfo) {
                             this.textContent = 'Booked';
                             this.classList.add('booked');
@@ -73,4 +60,15 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => console.error('Error loading class data:', error));
+});
+
+// Hamburger Menu
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const smallNav = document.querySelector(".small-nav");
+
+    // toggle small nav showing when hamburger is clicked
+    hamburger.addEventListener("click", () => {
+        smallNav.classList.toggle("open");
+    });
 });

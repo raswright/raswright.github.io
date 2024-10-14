@@ -276,12 +276,6 @@ body {
     color: var(--text-color);
 }
 
-.white-spacer {
-    background-color: white; 
-    height: 40px; 
-    width: 100%; 
-}
-
 .call-to-action h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
@@ -381,7 +375,7 @@ body {
 .service-item {
     position: relative;
     padding: 30px; 
-    width: 90%;
+    width: 100%;
     height: 250px; 
     border-radius: 8px;
     overflow: hidden;
@@ -488,18 +482,32 @@ body {
 @media (max-width: 768px) {
     .services-section {
         grid-template-columns: 1fr 1fr; 
+        padding: 10px;
     }
 
     .service-item {
-        width: 90%;
-        margin: 0 auto 20px auto;
+        width: 100%; 
+        margin: 0 auto; 
+        box-sizing: border-box; 
     }
 }
 
 @media (max-width: 480px) {
     .services-section {
         grid-template-columns: 1fr; 
+        padding: 10px; 
     }
+
+    .service-item {
+        margin: 0 auto 0px; 
+        padding: 15px; 
+        box-sizing: border-box; 
+    }
+}
+
+/* Preventing overflow/centering (Services Page) */
+* {
+    box-sizing: border-box;
 }
 
 /* Our Mission (About Us Page) */ 
@@ -625,7 +633,7 @@ h1 {
 .contact-section {
     text-align: center; 
     margin: 0 auto; 
-    margin-right: -10px;
+    margin-right: 30px;
 }
 
 .contact-section p {
@@ -635,6 +643,7 @@ h1 {
 
 .contact-form label {
     font-size: 1.5rem;
+    text-align: left;
 }
 
 .contact-form input[type="text"],
@@ -730,7 +739,7 @@ footer {
     }
 }
 
-/* Responsive Design - Mission/Founding Story (About us Page) */
+/* Responsive Design - Mission/Founding Story (About Us Page) */
 @media (max-width: 768px) {
     .mission-images {
         flex-direction: column; 
@@ -769,9 +778,31 @@ footer {
     .founding-section .text-right {
         text-align: left; 
     }
+    .contact-form {
+        text-align: center;
+    }
+}
+
+/* Responsive Design - Contact Us Form (About Us Page) */
+
+@media (max-width: 480px) {
+    .contact-form {
+        width: 100%; /* Full width for very small screens */
+        padding: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; /* Adjust text size for small screens */
+    }
+
+    .contact-form button {
+        font-size: 16px;
+    }
 }
 
 /* Tables Styling (Schedule Page)*/
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -801,7 +832,6 @@ table tr:nth-child(even) {
     background-color: lightgray;
 }
 
-
 .preview-btn1 {
     background-color: var(--schedule-bg2);
     color: white;
@@ -822,28 +852,26 @@ table tr:nth-child(even) {
     transition: background-color 0.3s ease;
 }
 
-/* Default styles for the Book Now button */
 .book-btn {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--text-color);
+    color: white;
     padding: 8px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Styles for the Booked state */
+/* Booked State Styling (Schedule Page) */
 .book-btn.booked {
     background-color: var(--primary-color);
-    color: white;
+    color: #fff;
 }
 
 .class-details img {
-    width: 100px;  /* Set the width you prefer */
-    height: auto;  /* Automatically adjust height based on width */
-    object-fit: cover;  /* Optional: crops the image to fit the container */
+    width: 100px;  
+    height: auto;  
+    object-fit: cover; 
 }
-
 
 .booked {
     color: var(--warning-color);
@@ -896,13 +924,14 @@ table tr:nth-child(even) {
 }
 
 /* Responsive design (Schedule Page) */
+
 @media (max-width: 768px) {
     table th, table td {
         font-size: 12px;
-        padding: 8px;
+        padding: 3px;
     }
 
-    .preview-btn {
+    .preview-btn-preview-btn1 {
         padding: 6px 10px;
         font-size: 12px;
     }
@@ -1136,4 +1165,55 @@ footer p {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/*Hamburger Menu Styling (All Pages) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+/* Responsive Design (All Pages) */
+
+@media (max-width: 768px) {
+
+    .large-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .small-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        z-index: 99;
+    }
+
+    .small-nav ul li {
+        margin: 10px 0;
+    }
+
+    .small-nav ul li a {
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        padding: 10px 0;
+        display: block;
+    }
+    
+    .small-nav.open {
+        display: block;
+    }
 }

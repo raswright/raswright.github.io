@@ -62,7 +62,7 @@
         "availability": "18/25 slots available",
         "location": "Room B",
         "status": "Open",
-        "img_name": "pilates1-class.jpg",
+        "img_name": "pilates1.jpg",
         "extra_info": ["Focus on core strength", "No equipment needed", "Bring a hand towel"]
     },
     {
@@ -73,7 +73,7 @@
         "availability": "14/20 slots available",
         "location": "Room B",
         "status": "Open",
-        "img_name": "pilates2-class.jpg",
+        "img_name": "pilates2.jpg",
         "extra_info": ["Focus on core strength", "No equipment needed", "Bring a hand towel"]
     },
     {
@@ -84,7 +84,7 @@
         "availability": "12/15 slots available",
         "location": "Room B",
         "status": "Open",
-        "img_name": "pilates3-class.jpg",
+        "img_name": "pilates3.jpg",
         "extra_info": ["Focus on core strength", "No equipment needed", "Bring a hand towel"]
     },
     {
