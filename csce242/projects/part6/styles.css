@@ -375,7 +375,7 @@ body {
 .service-item {
     position: relative;
     padding: 30px; 
-    width: 100%;
+    width: 90%;
     height: 250px; 
     border-radius: 8px;
     overflow: hidden;
@@ -488,7 +488,6 @@ body {
     .service-item {
         width: 100%; 
         margin: 0 auto; 
-        box-sizing: border-box; 
     }
 }
 
